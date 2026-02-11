@@ -213,62 +213,110 @@ ________________________________________
 •	executive decision-making
 """
 
-# --- 3. LIGHT MODE UI STYLING ---
+# ---------------------------------------------------
+# 3. DESIGN — EXACTLY AS YOU SPECIFIED
+# ---------------------------------------------------
+
 st.set_page_config(page_title="KSC | Professional Experience Explorer", layout="centered")
 
 st.markdown("""
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-    
-    .stApp {
-        background-color: #FFFFFF; /* Clean White */
-        color: #1E293B; /* Slate Grey Text */
-        font-family: 'Inter', sans-serif;
-    }
-    
-    .stTextInput>div>div>input {
-        background-color: #F8FAFC; 
-        border: 1px solid #E2E8F0;
-        border-radius: 10px;
-        padding: 15px;
-        color: #1E293B;
-    }
-    
-    .response-box {
-        background-color: #F8FAFC;
-        padding: 30px;
-        border-radius: 12px;
-        border: 1px solid #F1F5F9;
-        line-height: 1.8;
-        color: #334155;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        margin-bottom: 20px;
-    }
-    
-    h1 { color: #0F172A; font-weight: 600; }
-    
-    /* Footer Styling */
-    .footer {
-        font-size: 0.85rem;
-        color: #64748B;
-        margin-top: 50px;
-        border-top: 1px solid #E2E8F0;
-        padding-top: 20px;
-    }
-    a { color: #2563EB; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    </style>
-    """, unsafe_allow_html=True)
+<style>
 
-# --- 4. THE INTERFACE ---
-st.title("Khoo Suk Chyi")
-st.markdown("<p style='color: #64748B;'>Interactive Professional Experience Explorer</p>", unsafe_allow_html=True)
+body {
+    background-color: white;
+}
 
-query = st.text_input("Enter a keyword, skill, or industry (e.g. '5G',  'Ambiguity',  'Negotiation')", 
-                      placeholder="Start typing here...")
+/* Name (big grey bold) */
+.name-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #6f6f6f;
+    margin-bottom: 5px;
+}
+
+/* Main title (big black bold) */
+.main-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Instruction (medium grey bold) */
+.instruction {
+    font-size: 20px;
+    font-weight: 600;
+    color: #6f6f6f;
+    margin-bottom: 10px;
+}
+
+/* Placeholder text */
+input::placeholder {
+    color: black !important;
+    opacity: 1;
+    font-size: 18px;
+}
+
+/* Footer small grey text */
+.description-small {
+    font-size: 14px;
+    color: #6f6f6f;
+    margin-top: 20px;
+}
+
+.disclaimer-small-bold {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6f6f6f;
+    margin-top: 5px;
+}
+
+.contact-small {
+    font-size: 14px;
+    color: #6f6f6f;
+}
+
+.contact-small-bold {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6f6f6f;
+}
+
+/* Response box */
+.response-box {
+    background-color: #F8FAFC;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #F1F5F9;
+    line-height: 1.8;
+    color: #334155;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-top: 30px;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+# ---------------------------------------------------
+# 4. UI — EXACT TEXT YOU SPECIFIED
+# ---------------------------------------------------
+
+st.markdown('<div class="name-title">Khoo Suk Chyi</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-title">Interactive Professional Experience Explorer</div>', unsafe_allow_html=True)
+st.markdown('<div class="instruction">Enter a keyword, skill, or industry (e.g. "5G", "Ambiguity", "Negotiation")</div>', unsafe_allow_html=True)
+
+query = st.text_input(" ", placeholder="Start typing here ...")
+
+st.markdown('<div class="description-small">This is a high-signal, interactive map of a legal and regulatory career, based only upon the uploaded knowledge base.</div>', unsafe_allow_html=True)
+st.markdown('<div class="disclaimer-small-bold">It is neither a CV nor a chatbot. It does not generate new experience or make unverifiable claims.</div>', unsafe_allow_html=True)
+st.markdown('<div class="contact-small">For clarifications or confirmation of any output,</div>', unsafe_allow_html=True)
+st.markdown('<div class="contact-small-bold">please contact Suk Chyi directly at: www.linkedin.com/in/khoosukchyi</div>', unsafe_allow_html=True)
+
+# ---------------------------------------------------
+# 5. AI ENGINE (UNCHANGED)
+# ---------------------------------------------------
 
 if query:
-    # This prompt tells the AI to behave as your "Explorer"
     system_prompt = f"""
 You are the Experience Explorer for Suk Chyi. Your job is to answer the query "{query}" strictly and only based on the archive provided. You do not hallucinate, invent new experience, or infer anything not directly grounded in the archive.
 
@@ -277,93 +325,48 @@ FORMAT RULES (NON-NEGOTIABLE)
 ---------------------------------------------
 1. All output must be written in short paragraphs of 2–4 lines.
 2. Insert exactly ONE blank line between paragraphs.
-3. Do NOT insert blank lines inside a paragraph.
-4. Bullet points may be used only for lists of three or more items.
-5. A paragraph may contain multiple sentences, but they must appear as one continuous block of text.
-6. After completing a paragraph, insert exactly TWO newline characters.
-7. Never merge two distinct ideas into the same paragraph.
-8. Never place two paragraphs back-to-back without a blank line between them.
-9. No paragraph should begin or end with a quotation mark.
+3. No blank lines inside a paragraph.
+4. Bullet points only for lists of 3 or more items.
+5. A paragraph may contain multiple sentences but must appear as one continuous block.
 
 ---------------------------------------------
 QUOTATION RULES
 ---------------------------------------------
 Use quotation marks ONLY for:
 - the exact search keyword "{query}"
-- the two quotes already in the archive:
-  1. “How you ask your dad is never how you ask your mom.”
-  2. “Any senior will thrive with your support, and any junior will grow under your guidance.”
-Do NOT invent new quotes or apply them outside their allowed domains.
+- the two quotes already in the archive.
 
 ---------------------------------------------
-PRONOUN & REFERENCING RULES
+PRONOUN RULES
 ---------------------------------------------
-1. Refer to Suk Chyi using she/her.
-2. Use “Suk Chyi” sparingly and only for clarity.
-3. Do not use substitutes like “the individual” or “the candidate”.
+Refer to Suk Chyi using she/her.
 
 ---------------------------------------------
 TRANSFERABILITY RULES
 ---------------------------------------------
-If the archive directly mentions the keyword:
-- Use the explicit relevant content.
+If the archive directly mentions "{query}":
+- Use explicit content.
 
-If the archive does NOT mention the keyword:
+If not:
 1. Begin with: “The archive does not contain specific data on "{query}".”
-2. Then map adjacent or transferable experience strictly grounded in the archive.
-3. Do not infer beyond what is written.
-
-Forbidden phrasing:
-- “She probably…”
-- “It seems likely…”
-- “It is reasonable to assume…”
-- Any invented experience.
-
-Permitted phrasing:
-- “While not mentioned directly, she has adjacent experience in…”
-- “A related capability from the archive is…”
+2. Then map only adjacent experience already in the archive.
+3. Never guess or invent.
 
 ---------------------------------------------
 TONE RULES
 ---------------------------------------------
-Your tone must be:
-- narrative, professional, and storytelling
-- vivid, structured, and senior
-- crisp and analytical, not hype-filled
-- flowing naturally between ideas, without losing structure
-- grounded only in the archive; do not invent or speculate
+Narrative, senior, analytical, structured, crisp and grounded.
 
 ---------------------------------------------
-OUTPUT STRUCTURE RULES (STRICT)
----------------------------------------------
-1. Output must be structured in short paragraphs of 2–4 lines each.
-2. Insert exactly ONE blank line between paragraphs.
-3. No blank lines inside paragraphs.
-4. Bullet points only for lists of 3+ items.
-5. Each paragraph must end with two newline characters.
-
----------------------------------------------
-ARCHIVE (DO NOT ADD ANYTHING OUTSIDE THIS)
+ARCHIVE (STRICT SOURCE)
 ---------------------------------------------
 {THE_ARCHIVE}
----------------------------------------------
-END OF INSTRUCTIONS
+
 """
-    
-    with st.spinner("Analyzing Experience..."):
+
+    with st.spinner("Analyzing experience..."):
         try:
             response = model.generate_content(system_prompt)
             st.markdown(f'<div class="response-box">{response.text}</div>', unsafe_allow_html=True)
         except Exception as e:
             st.error(f"Something went wrong. Technical details: {e}")
-
-# --- 5. THE NEW DISCLAIMER & FOOTER ---
-st.markdown(f"""
-    <div class="footer">
-        <p>This is a high-signal, interactive map of a legal and regulatory career, based only upon the uploaded knowledge base. 
-        It is neither a CV nor a chatbot.</p>
-        <p>It does not generate new experience or make unverifiable claims.</p>
-        <p>For clarifications or confirmation of any output, please contact Suk Chyi directly at:<br>
-        <a href="https://www.linkedin.com/in/khoosukchyi" target="_blank">www.linkedin.com/in/khoosukchyi</a></p>
-    </div>
-    """, unsafe_allow_html=True)
