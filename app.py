@@ -271,10 +271,26 @@ if query:
     system_prompt = f"""
     Using only the professional archive below, answer the query '{query}'.
     
-    CRITICAL FORMATTING RULE: 
-    When mentioning the keyword '{query}' or other key professional concepts in your response, 
-    do NOT use bold asterisks (**). Instead, enclose them in quotation marks (" "). 
-    Example: Based on the archive, "collaboration" is...
+   FORMATTING RULES (STRICT):
+
+1. Do NOT use bold (** **) anywhere in the response.
+
+2. Use quotation marks ONLY in these situations:
+   a. When quoting the user's exact search keyword '{query}'.
+   b. When reproducing actual quotations that appear in the archive 
+      — for example:
+        “Any senior will thrive with your support, and any junior will grow under your guidance.”
+        “How you ask your dad is never how you ask your mom.”
+   c. Do NOT place quotes around paraphrased ideas, general concepts, or 
+      high-level summaries taken from the archive. Only use quotes for 
+      direct, verbatim sentences that were already written as quotations.
+
+3. When referring to the candidate, ALWAYS use the name "Suk Chyi".
+   Do NOT refer to them as “the individual”, “the candidate”, 
+   “the person”, etc.
+
+4. Keep output clean, natural, and professional — no unnecessary punctuation, 
+   wirespeak, over-quoting, or mechanical phrasing.
     
     Guidelines:
     1. Use the specific phrasing from the archive (e.g., misplaced comma, firefighting).
