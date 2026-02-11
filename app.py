@@ -3,14 +3,14 @@ import google.generativeai as genai
 
 # --- 1. THE ENGINE ---
 # PASTE YOUR KEY INSIDE THESE QUOTES
-API_KEY = "AIzaSyAIoY9lyAcDt1aOxwPfd8Eft9SXgd0rV_0"
+API_KEY = "PASTE_YOUR_NEW_KEY_HERE"
 
 try:
     genai.configure(api_key=API_KEY)
-    # Using the most stable model name to avoid the 404 error
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    # Changed to 'gemini-flash-latest' to fix the 404 error
+    model = genai.GenerativeModel('gemini-flash-latest')
 except Exception:
-    st.error("Engine failed to start. Please check your API key in the code.")
+    st.error("Engine failed to start. Please check your API key.")
 
 # --- 2. YOUR KNOWLEDGE BASE ---
 # Paste the content of your 'Markdown Knowledge Base.docx' here.
