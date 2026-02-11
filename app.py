@@ -2,17 +2,20 @@ import streamlit as st
 import google.generativeai as genai
 
 # --- 1. THE ENGINE ---
-# PASTE YOUR KEY EXACTLY INSIDE THE QUOTES
+# PASTE YOUR KEY INSIDE THESE QUOTES
 API_KEY = "AIzaSyAIoY9lyAcDt1aOxwPfd8Eft9SXgd0rV_0"
 
-# This part checks if the key works
 try:
     genai.configure(api_key=API_KEY)
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    # Changed to 'gemini-flash-latest' to fix the 404 error
+    model = genai.GenerativeModel('gemini-flash-latest')
 except Exception:
     st.error("Engine failed to start. Please check your API key.")
 
-# --- 2. THE ARCHIVE (Paste your full doc content between the triple quotes) ---
+# --- 2. YOUR KNOWLEDGE BASE ---
+# 1. Open your 'Markdown Knowledge Base.docx'
+# 2. Select ALL the text in that document and copy it.
+# 3. DELETE the sentence below and PASTE your text inside the triple quotes.
 THE_ARCHIVE = """
 Professional Knowledge Base (Markdown)
 A structured, high-signal, AI-friendly representation of experience, capabilities, and intellectual operating system.
@@ -217,69 +220,57 @@ st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
     
-    /* Light Mode Theme */
     .stApp {
-        background-color: #FFFFFF; /* Pure White */
-        color: #1E293B; /* Dark Slate Text */
+        background-color: #FFFFFF; /* Clean White */
+        color: #1E293B; /* Slate Grey Text */
         font-family: 'Inter', sans-serif;
     }
     
-    /* Search Bar Styling */
     .stTextInput>div>div>input {
-        background-color: #F8FAFC; /* Light Greyish-Blue */
-        color: #1E293B;
+        background-color: #F8FAFC; 
         border: 1px solid #E2E8F0;
-        border-radius: 8px;
-        padding: 12px;
+        border-radius: 10px;
+        padding: 15px;
+        color: #1E293B;
     }
     
-    /* Result Box Styling */
     .response-box {
         background-color: #F8FAFC;
         padding: 30px;
-        border: 1px solid #E2E8F0;
         border-radius: 12px;
-        margin-top: 25px;
+        border: 1px solid #F1F5F9;
         line-height: 1.8;
         color: #334155;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
     
     h1 { color: #0F172A; font-weight: 600; }
-    p { color: #64748B; }
     </style>
     """, unsafe_allow_html=True)
 
 # --- 4. THE INTERFACE ---
 st.title("Suk Chyi")
-st.markdown("<p>Interactive Experience Explorer</p>", unsafe_allow_html=True)
+st.markdown("<p style='color: #64748B;'>Interactive Experience Explorer</p>", unsafe_allow_html=True)
 st.markdown("---")
 
-# Instruction for the user based on your Public Facing Package [cite: 227]
-query = st.text_input("Enter a keyword to explore Suk Chyi’s experience with context and precision.", 
-                      placeholder="e.g. '5G', 'Negotiation', 'Ambiguity'")
+query = st.text_input("Search for a skill, industry, or keyword (e.g. '5G', 'Arbitration', 'Ambiguity')", 
+                      placeholder="Enter keyword here...")
 
 if query:
-    # Logic based on Public Facing Package instructions [cite: 187-192]
     system_prompt = f"""
-    Using the Archive: {THE_ARCHIVE}
-    
-    For the query '{query}':
-    1. Surface the most relevant experience.
-    2. Explain the relevance.
-    3. Clearly label 'Transferable Capabilities'.
-    4. Provide a 'Thinking Style Synthesis'.
-    5. Suggest 2 related keywords.
-    
-    Tone: Crisp, Senior, Thoughtful[cite: 200]. 
+    Context: {THE_ARCHIVE}
+    User Query: {query}
+    Instruction: Answer using the specific language from the archive. 
+    Tone: Senior, professional, and crisp.
+    Format: Use bullet points for 'Transferable Capabilities'.
     """
     
-    with st.spinner("Extracting signal..."):
+    with st.spinner("Synthesizing..."):
         try:
-            # We add a check here to catch the specific API error in the UI
             response = model.generate_content(system_prompt)
             st.markdown(f'<div class="response-box">{response.text}</div>', unsafe_allow_html=True)
         except Exception as e:
-            st.error(f"API Error: Please verify that your API Key is active in Google AI Studio. Error details: {e}")
+            st.error(f"Something went wrong. Technical details: {e}")
 
 st.markdown("<br><br>", unsafe_allow_html=True)
-st.caption("Not a CV. A precision retrieval engine.")
+st.caption("A precision retrieval engine for the curated knowledge base of Suk Chyi.")
