@@ -220,26 +220,17 @@ st.markdown("""
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
     
     .stApp {
-        background-color: #FFFFFF; /* Clean White */
-        color: #1E293B; /* Slate Grey Text */
+        background-color: #FFFFFF;
+        color: #1E293B;
         font-family: 'Inter', sans-serif;
-   }
+    }
     
-    /* Search Bar Styling */
     .stTextInput>div>div>input {
         background-color: #F8FAFC; 
         border: 1px solid #E2E8F0;
         border-radius: 10px;
         padding: 15px;
         color: #1E293B;
-        transition: border-color 0.3s;
-    }
-
-    /* Change Red Focus to Green */
-    .stTextInput>div>div>input:focus {
-        border-color: #a3c1b0 !important;
-        box-shadow: 0 0 0 2px rgba(163, 193, 176, 0.5) !important;
-        outline: none !important;
     }
     
     .response-box {
