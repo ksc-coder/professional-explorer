@@ -307,17 +307,10 @@ st.markdown('<div class="instruction">Enter a keyword, skill, or industry (e.g.,
 
 query = st.text_input(" ", placeholder="Start typing here ...")
 
-st.markdown('<div class="description-small">This is a high-signal, interactive map of a legal career.</div>', unsafe_allow_html=True)
-st.markdown('<div class="disclaimer-small-bold">It is neither a CV nor a chatbot.</div>', unsafe_allow_html=True)
-st.markdown('<div class="contact-small">For clarifications or confirmation of any output, please contact Suk Chyi directly at:</div>', unsafe_allow_html=True)
-st.markdown(
-    '<div class="contact-small-bold">'
-    '<a href="https://www.linkedin.com/in/khoosukchyi" target="_blank" style="color:#6f6f6f; text-decoration:none;">'
-    'www.linkedin.com/in/khoosukchyi'
-    '</a>'
-    '</div>',
-    unsafe_allow_html=True
-)
+st.markdown('<div class="description-small">This is a high-signal, interactive map of a legal career. It is neither a CV nor a chatbot.</div>', unsafe_allow_html=True)
+
+st.markdown('<div class="contact-small">For clarification or confirmation of any output, please contact Suk Chyi directly at: <span class="contact-small-bold">www.linkedin.com/in/khoosukchyi</span></div>', unsafe_allow_html=True)
+
 
 # ---------------------------------------------------
 # 5. AI ENGINE (UNCHANGED)
