@@ -303,14 +303,14 @@ input::placeholder {
 
 st.markdown('<div class="name-title">KHOO SUK CHYI</div>', unsafe_allow_html=True)
 st.markdown('<div class="main-title">Interactive Professional Experience Explorer</div>', unsafe_allow_html=True)
-st.markdown('<div class="instruction">Enter a keyword, skill, or industry (</div>', unsafe_allow_html=True)
+st.markdown('<div class="instruction">Enter a keyword, skill, or industry </div>', unsafe_allow_html=True)
 
 query = st.text_input(" ", placeholder="Start typing here ...")
 
-st.markdown('<div class="description-small">This is a high-signal, interactive map of a legal and regulatory career, based only upon the uploaded knowledge base.</div>', unsafe_allow_html=True)
-st.markdown('<div class="disclaimer-small-bold">It is neither a CV nor a chatbot. It does not generate new experience or make unverifiable claims.</div>', unsafe_allow_html=True)
-st.markdown('<div class="contact-small">For clarifications or confirmation of any output,</div>', unsafe_allow_html=True)
-st.markdown('<div class="contact-small-bold">please contact Suk Chyi directly at: www.linkedin.com/in/khoosukchyi</div>', unsafe_allow_html=True)
+st.markdown('<div class="description-small">This is a high-signal, interactive map of a legal career.</div>', unsafe_allow_html=True)
+st.markdown('<div class="disclaimer-small-bold">It is neither a CV nor a chatbot.</div>', unsafe_allow_html=True)
+st.markdown('<div class="contact-small">For clarifications or confirmation of any output, please contact Suk Chyi directly at:</div>', unsafe_allow_html=True)
+st.markdown('<div class="contact-small-bold"> www.linkedin.com/in/khoosukchyi</div>', unsafe_allow_html=True)
 
 # ---------------------------------------------------
 # 5. AI ENGINE (UNCHANGED)
