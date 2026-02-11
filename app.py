@@ -309,11 +309,8 @@ query = st.text_input(" ", placeholder="Start typing here ...")
 
 st.markdown(f"""
     <div class="description-small">
-        <span>This is a high-signal, interactive map of a legal and regulatory career, based only upon the uploaded knowledge base.</span>
+        <span>This is a high-signal, interactive map of a legal career.</span>
         <span class="disclaimer-small-bold" style="margin-left: 5px;">It is neither a CV nor a chatbot.</span>
-    </div>
-    <div class="description-small" style="margin-top: 5px;">
-        <span>It does not generate new experience or make unverifiable claims.</span>
     </div>
     <div class="contact-small" style="margin-top: 15px;">
         <span>For clarifications or confirmation of any output, </span>
