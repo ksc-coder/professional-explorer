@@ -310,7 +310,7 @@ query = st.text_input(" ", placeholder="Start typing here ...")
 st.markdown("""
     <div class="description-small">
         <span class="description-small">This is a high-signal, interactive map of a legal career.</span>
-        <span class="disclaimer-small-bold" style="font-weight: 600; margin-left: 5px;">It is neither a CV nor a chatbot.</span>
+        <span class="disclaimer-small-bold" style="font-weight: 600; margin-left: 4px;">It is neither a CV nor a chatbot.</span>
     </div>
     """, unsafe_allow_html=True)
 
