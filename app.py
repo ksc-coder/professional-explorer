@@ -223,14 +223,23 @@ st.markdown("""
         background-color: #FFFFFF; /* Clean White */
         color: #1E293B; /* Slate Grey Text */
         font-family: 'Inter', sans-serif;
-    }
+   }
     
+    /* Search Bar Styling */
     .stTextInput>div>div>input {
         background-color: #F8FAFC; 
         border: 1px solid #E2E8F0;
         border-radius: 10px;
         padding: 15px;
         color: #1E293B;
+        transition: border-color 0.3s;
+    }
+
+    /* Change Red Focus to Green */
+    .stTextInput>div>div>input:focus {
+        border-color: #a3c1b0 !important;
+        box-shadow: 0 0 0 2px rgba(163, 193, 176, 0.5) !important;
+        outline: none !important;
     }
     
     .response-box {
@@ -246,7 +255,6 @@ st.markdown("""
     
     h1 { color: #0F172A; font-weight: 600; }
     
-    /* Footer Styling */
     .footer {
         font-size: 0.85rem;
         color: #64748B;
@@ -254,7 +262,7 @@ st.markdown("""
         border-top: 1px solid #E2E8F0;
         padding-top: 20px;
     }
-    a { color: #2563EB; text-decoration: none; }
+    a { color: #2563EB; text-decoration: none; font-weight: 600; }
     a:hover { text-decoration: underline; }
     </style>
     """, unsafe_allow_html=True)
@@ -263,7 +271,7 @@ st.markdown("""
 st.title("Khoo Suk Chyi")
 st.markdown("<p style='color: #64748B;'>Interactive Professional Experience Explorer</p>", unsafe_allow_html=True)
 
-query = st.text_input("Enter a keyword, skill, or industry (e.g. '5G', 'Arbitration', 'Ambiguity')", 
+query = st.text_input("Enter a keyword, skill, or industry (e.g. '5G', 'Negotiation', 'Ambiguity')", 
                       placeholder="Start typing here...")
 
 if query:
@@ -271,8 +279,13 @@ if query:
     system_prompt = f"""
     Using only the professional archive below, answer the query '{query}'.
     
+    CRITICAL FORMATTING RULE: 
+    When mentioning the keyword '{query}' or other key professional concepts in your response, 
+    do NOT use bold asterisks (**). Instead, enclose them in quotation marks (" "). 
+    Example: Based on the archive, "collaboration" is...
+    
     Guidelines:
-    1. Use the specific phrasing from the archive (e.g., microns, engineer's diagrams, firefighting).
+    1. Use the specific phrasing from the archive (e.g., misplaced comma, firefighting).
     2. Map transferrable capabilities clearly.
     3. Maintain a senior, crisp, and professional tone.
     4. If the information isn't in the archive, say you don't have specific data on that.
