@@ -345,6 +345,12 @@ OUTPUT STRUCTURE (STRICT)
 3. Do NOT insert blank lines within paragraphs.
 4. Bullet points are allowed only when listing 3 or more items.
 5. No paragraph should begin or end with a quotation mark.
+    PARAGRAPH RULES (STRICT)
+6. A paragraph may contain multiple sentences, but it must end with two newline characters.
+7. After finishing a paragraph, insert exactly one blank line before the next paragraph.
+8. Never place two paragraphs back-to-back on consecutive lines.
+9. Never merge paragraphs even if they discuss related ideas.
+10. If you begin a new idea, a new example, or a new piece of analysis, start a new paragraph.
 
 ---------------------------------------------
 ARCHIVE (DO NOT ADD ANYTHING OUTSIDE THIS)
