@@ -316,8 +316,9 @@ st.markdown("""
 
 st.markdown(
     '<div class="contact-small">'
-    'For clarification or confirmation of any output, please contact Suk Chyi directly at: '
-    '<a href="https://www.linkedin.com/in/khoosukchyi" class="contact-small-bold" target="_blank">www.linkedin.com/in/khoosukchyi</a>'
+       <span class="description-small">For clarification or confirmation of any output,</span>
+       <span class="disclaimer-small-bold" style="font-weight: 600; margin-left: 3px;">please contact Suk Chyi directly at:'</span>
+       '<a href="https://www.linkedin.com/in/khoosukchyi" class="contact-small-bold" target="_blank">www.linkedin.com/in/khoosukchyi</a>'
     '</div>',
     unsafe_allow_html=True
 )
