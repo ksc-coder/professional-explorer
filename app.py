@@ -307,7 +307,8 @@ st.markdown('<div class="instruction">Enter a keyword, skill, or industry (e.g.,
 
 query = st.text_input(" ", placeholder="Start typing here ...")
 
-st.markdown('<div class="description-small">This is a high-signal, interactive map of a legal career. It is neither a CV nor a chatbot.</div>', unsafe_allow_html=True)
+st.markdown('<div class="description-small">This is a high-signal, interactive map of a legal career.</div>', unsafe_allow_html=True)
+('<div class="disclaimer-small-bold">It is neither a CV nor a chatbot.</div>', unsafe_allow_html=True)
 
 st.markdown(
     '<div class="contact-small">'
