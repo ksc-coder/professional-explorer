@@ -213,15 +213,15 @@ ________________________________________
 """
 
 # --- 3. LIGHT MODE UI STYLING ---
-st.set_page_config(page_title="Suk Chyi | Experience Explorer", layout="centered")
+st.set_page_config(page_title="KSC | Professional Experience Explorer", layout="centered")
 
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
     
     .stApp {
-        background-color: #FFFFFF;
-        color: #1E293B;
+        background-color: #FFFFFF; /* Clean White */
+        color: #1E293B; /* Slate Grey Text */
         font-family: 'Inter', sans-serif;
     }
     
@@ -246,6 +246,7 @@ st.markdown("""
     
     h1 { color: #0F172A; font-weight: 600; }
     
+    /* Footer Styling */
     .footer {
         font-size: 0.85rem;
         color: #64748B;
@@ -253,7 +254,7 @@ st.markdown("""
         border-top: 1px solid #E2E8F0;
         padding-top: 20px;
     }
-    a { color: #2563EB; text-decoration: none; font-weight: 600; }
+    a { color: #2563EB; text-decoration: none; }
     a:hover { text-decoration: underline; }
     </style>
     """, unsafe_allow_html=True)
