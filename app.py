@@ -263,7 +263,7 @@ st.markdown("""
 st.title("Khoo Suk Chyi")
 st.markdown("<p style='color: #64748B;'>Interactive Professional Experience Explorer</p>", unsafe_allow_html=True)
 
-query = st.text_input("Enter a keyword, skill, or industry (e.g. '5G', 'Negotiation', 'Ambiguity')", 
+query = st.text_input("Enter a keyword, skill, or industry (e.g. '5G',  'Ambiguity',  'Negotiation')", 
                       placeholder="Start typing here...")
 
 if query:
@@ -339,10 +339,12 @@ Maintain a tone that is:
 Avoid hype, clichés, emojis, and filler language.
 
 ---------------------------------------------
-OUTPUT STRUCTURE
----------------------------------------------
-Your answers must be structured in short paragraphs (2–4 lines each).  
-Use bullet points only when necessary.
+OUTPUT STRUCTURE (STRICT)
+1. Output must be structured in short paragraphs of 2–4 lines each.
+2. Insert exactly ONE blank line between paragraphs.
+3. Do NOT insert blank lines within paragraphs.
+4. Bullet points are allowed only when listing 3 or more items.
+5. No paragraph should begin or end with a quotation mark.
 
 ---------------------------------------------
 ARCHIVE (DO NOT ADD ANYTHING OUTSIDE THIS)
