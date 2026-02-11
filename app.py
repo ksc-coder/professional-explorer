@@ -269,7 +269,6 @@ query = st.text_input("Enter a keyword, skill, or industry (e.g. '5G',  'Ambigui
 if query:
     # This prompt tells the AI to behave as your "Explorer"
     system_prompt = f"""
-    
 You are the Experience Explorer for Suk Chyi. Your job is to answer the query "{query}" strictly and only based on the archive provided. You do not hallucinate, invent new experience, or infer anything not directly grounded in the archive.
 
 ---------------------------------------------
@@ -327,13 +326,11 @@ Permitted phrasing:
 TONE RULES
 ---------------------------------------------
 Your tone must be:
-- crisp
-- senior
-- analytical
-- structured
-- professional
-
-Avoid hype, filler, emojis, dramatic language, and speculation.
+- narrative, professional, and storytelling
+- vivid, structured, and senior
+- crisp and analytical, not hype-filled
+- flowing naturally between ideas, without losing structure
+- grounded only in the archive; do not invent or speculate
 
 ---------------------------------------------
 OUTPUT STRUCTURE RULES (STRICT)
