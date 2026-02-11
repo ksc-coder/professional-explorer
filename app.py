@@ -301,9 +301,9 @@ input::placeholder {
 # 4. UI — EXACT TEXT YOU SPECIFIED
 # ---------------------------------------------------
 
-st.markdown('<div class="name-title">Khoo Suk Chyi</div>', unsafe_allow_html=True)
+st.markdown('<div class="name-title">KHOO SUK CHYI</div>', unsafe_allow_html=True)
 st.markdown('<div class="main-title">Interactive Professional Experience Explorer</div>', unsafe_allow_html=True)
-st.markdown('<div class="instruction">Enter a keyword, skill, or industry (e.g. "5G", "Ambiguity", "Negotiation")</div>', unsafe_allow_html=True)
+st.markdown('<div class="instruction">Enter a keyword, skill, or industry (</div>', unsafe_allow_html=True)
 
 query = st.text_input(" ", placeholder="Start typing here ...")
 
