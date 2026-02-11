@@ -364,7 +364,7 @@ END OF INSTRUCTIONS
 # --- 5. THE NEW DISCLAIMER & FOOTER ---
 st.markdown(f"""
     <div class="footer">
-        <p>A high-signal, interactive map of a legal and regulatory career, based only upon the uploaded knowledge base. 
+        <p>This is a high-signal, interactive map of a legal and regulatory career, based only upon the uploaded knowledge base. 
         It is neither a CV nor a chatbot.</p>
         <p>It does not generate new experience or make unverifiable claims.</p>
         <p>For clarifications or confirmation of any output, please contact Suk Chyi directly at:<br>
