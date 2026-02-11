@@ -314,14 +314,13 @@ st.markdown("""
     </div>
     """, unsafe_allow_html=True)
 
-st.markdown(
-    '<div class="contact-small">'
-       <span class="description-small">For clarification or confirmation of any output,</span>
-       <span class="disclaimer-small-bold" style="font-weight: 600; margin-left: 3px;">please contact Suk Chyi directly at:'</span>
-       '<a href="https://www.linkedin.com/in/khoosukchyi" class="contact-small-bold" target="_blank">www.linkedin.com/in/khoosukchyi</a>'
-    '</div>',
-    unsafe_allow_html=True
-)
+st.markdown("""
+    <div class="contact-small" style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: #64748B;">
+        <span class="description-small">For clarification or confirmation of any output,</span>
+        <span class="disclaimer-small-bold" style="font-weight: 600; margin-left: 3px;">please contact Suk Chyi directly at:</span>
+        <a href="https://www.linkedin.com/in/khoosukchyi" style="color: #2563EB; font-weight: 600; text-decoration: none;" target="_blank">www.linkedin.com/in/khoosukchyi</a>
+    </div>
+    """, unsafe_allow_html=True)
 
 # ---------------------------------------------------
 # 5. AI ENGINE (UNCHANGED)
