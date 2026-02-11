@@ -307,18 +307,18 @@ st.markdown('<div class="instruction">Enter a keyword, skill, or industry (e.g.,
 
 query = st.text_input(" ", placeholder="Start typing here ...")
 
-st.markdown("""
+st.markdown(f"""
     <div class="description-small">
-        <span class="description-small">This is a high-signal, interactive map of a legal career.</span>
-        <span class="disclaimer-small-bold" style="font-weight: 600; margin-left: 3px;">It is neither a CV nor a chatbot.</span>
+        <span>This is a high-signal, interactive map of a legal and regulatory career, based only upon the uploaded knowledge base.</span>
+        <span class="disclaimer-small-bold" style="margin-left: 5px;">It is neither a CV nor a chatbot.</span>
     </div>
-    """, unsafe_allow_html=True)
-
-st.markdown("""
-    <div class="contact-small">
-        <span class="disclaimer-small-bold">For clarification or confirmation of any output,</span>
-        <span class="description-small" style="font-weight: 600; margin-left: 3px;">please contact Suk Chyi directly at:</span>
-        <a href="https://www.linkedin.com/in/khoosukchyi" "contact-small" target="_blank">www.linkedin.com/in/khoosukchyi</a>
+    <div class="description-small" style="margin-top: 5px;">
+        <span>It does not generate new experience or make unverifiable claims.</span>
+    </div>
+    <div class="contact-small" style="margin-top: 15px;">
+        <span>For clarifications or confirmation of any output, </span>
+        <span class="contact-small">please contact Suk Chyi directly at:</span>
+        <a href="https://www.linkedin.com/in/khoosukchyi" class="contact-small-bold" target="_blank" style="margin-left: 3px; color: #6f6f6f;">www.linkedin.com/in/khoosukchyi</a>
     </div>
     """, unsafe_allow_html=True)
 
