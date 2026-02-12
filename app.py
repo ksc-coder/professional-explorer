@@ -215,11 +215,17 @@ query = st.text_input("", placeholder="Start typing here ...", label_visibility=
 
 # FOOTER
 st.markdown("""
+    <div class="disclaimer-small-bold"
+        A final note on method — and audacity:
     <div class="description-small">
-        This is a high-signal, interactive map of a legal career.
-        <span class="disclaimer-small-bold" style="margin-left: 5px;">It is neither a CV nor a chatbot.</span>
-    </div>
-    <div class="contact-small">
+        This document is not a credential. It is a demonstration.
+        </div>
+        It reflects how Suk Chyi thinks: structurally, contextually, with an eye on both the system and the user on the other side of it. The medium is the message — if you can architect knowledge for an AI, you can architect it for a regulator, a boardroom, or a cross-functional task force.
+        </div>
+        Is it perfect? Almost certainly not. But sending it anyway, to you, in this form? That takes a certain kind of confidence.
+        </div>
+        Call it gall. Call it conviction. Either way, it scores for effort — and effort, in the right hands, is simply strategy in motion.
+        </div>
         For clarification or confirmation of any output, please contact Suk Chyi directly at:
         <a href="https://www.linkedin.com/in/khoosukchyi" class="contact-small-bold linkedin-link" target="_blank" style="margin-left: 3px; color: #6f6f6f;">www.linkedin.com/in/khoosukchyi</a>
     </div>
