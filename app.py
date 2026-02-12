@@ -254,7 +254,7 @@ if query:
 # --- 6. RELOCATED BOTTOM CONTENT ---
 st.markdown(f"""
     <div class="bottom-container">
-        <div class="disclaimer-large">A final note on method — and audacity:</div>
+        <div class="disclaimer-large">A note on method — and audacity:</div>
         <div class="description-body">
             This document is not a credential. It is an attempt at one.<br>
             The premise: if you can architect knowledge for an AI — structure signal, strip noise, anticipate how it will be read and misread — you can probably architect it for a regulator, a boardroom, or a cross-functional task force. Same muscle. Different domain.<br>
