@@ -149,7 +149,7 @@ body { background-color: white; }
 
 /* Typography */
 .name-title {
-    font-size: 40px; font-weight: 700; color: #6f6f6f; margin-bottom: 5px; text-align: left;
+    font-size: 50px; font-weight: 700; color: #6f6f6f; margin-bottom: 5px; text-align: left;
 }
 .main-title {
     font-size: 32px; font-weight: 700; color: black; margin-bottom: 25px; text-align: left;
