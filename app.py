@@ -382,7 +382,7 @@ st.markdown(f"""
         </div>
         <div class="contact-small">
             NB: There are enough em-dashes here to flag this as AI-touched. For clarification, confirmation, or the graceful correction of any hallucination, please contact Suk Chyi directly at:
-            <a href="https://www.linkedin.com/in/khoosukchyi" class="linkedin-link" target="_blank">www.linkedin.com/in/khoosukchyi</a>
+            <a href="https://www.linkedin.com/in/khoosukchyi" class="linkedin-link" target="_blank">www.linkedin.com/in/khoosukchyi</a>.
         </div>
     </div>
     """, unsafe_allow_html=True)
