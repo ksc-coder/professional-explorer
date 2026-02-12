@@ -182,6 +182,26 @@ div[data-testid="stStatusWidget"] { visibility: hidden; height: 0%; position: fi
 #MainMenu { visibility: hidden; height: 0%; }
 header { visibility: hidden; height: 0%; }
 footer { visibility: hidden; height: 0%; }
+/* Animated underline for LinkedIn link */
+a.linkedin-link {
+    position: relative;
+    text-decoration: none;
+}
+
+a.linkedin-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 1px;
+    background-color: #6f6f6f;
+    transition: width 0.25s ease-out;
+}
+
+a.linkedin-link:hover::after {
+    width: 100%;
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -201,7 +221,7 @@ st.markdown("""
     </div>
     <div class="contact-small">
         For clarification or confirmation of any output, please contact Suk Chyi directly at:
-        <a href="https://www.linkedin.com/in/khoosukchyi" class="contact-small-bold" target="_blank" style="margin-left: 3px;">www.linkedin.com/in/khoosukchyi</a>
+        <a href="https://www.linkedin.com/in/khoosukchyi" class="contact-small-bold linkedin-link" target="_blank" style="margin-left: 3px; color: #6f6f6f;">www.linkedin.com/in/khoosukchyi</a>
     </div>
     """, unsafe_allow_html=True)
 
