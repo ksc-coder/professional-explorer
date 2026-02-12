@@ -253,7 +253,7 @@ st.markdown(f"""
         <div class="description-body">
             The premise: if you can architect knowledge for an AI — structure signal, strip noise, anticipate how it will be read and misread — you can probably architect it for a regulator, a boardroom, or a cross-functional task force. Same muscle. Different domain.
             Is it perfect? Almost certainly not. But sending it anyway, in this form, to you? That takes a certain kind of confidence.
-            Call it gall. Call it conviction. Either way, it scores for effort — and effort, in the right hands, is simply strategy in motion.
+            Call it gall. Call it conviction. Either way, it should score for effort — and effort, in the right hands, is simply strategy in motion.
         </div>
         <div class="contact-small">
             For clarification, confirmation, or the graceful correction of any hallucination, please contact Suk Chyi directly at:
