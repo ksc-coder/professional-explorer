@@ -1,5 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
+import google.api_core.exceptions as exceptions
 import os
 
 # --- 1. THE ENGINE ---
@@ -357,10 +358,24 @@ if query:
                     f'<div class="response-box">{response.text}</div>',
                     unsafe_allow_html=True
                 )
+        # 1. SPECIFIC CATCH: The Quota Limit (429 Error)
+        except exceptions.ResourceExhausted:
+            st.markdown(
+                """
+                <div class="response-box" style="border-left: 4px solid #94a3b8; background-color: #f1f5f9;">
+                    As the saying goes: <strong>休息是为了走更长远的路</strong> — 
+                    a little pause now fuels the journey ahead. The Explorer is taking that moment. 
+                    It’ll be back shortly.
+                </div>
+                """, 
+                unsafe_allow_html=True
+            )
+
+        # 2. GENERAL CATCH: All other errors (Connection, etc.)
         except Exception as e:
             st.error(f"Something went wrong. Technical details: {e}")
 
-    # Hide banner once the model finishes
+    # Hide banner once the model finishes (or fails)
     st.markdown("""
         <script>
         const banner = window.parent.document.getElementById('mobile-loading');
