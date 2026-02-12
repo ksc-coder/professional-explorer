@@ -294,7 +294,7 @@ input[type="text"] {
 # --- 4. UI LAYOUT ---
 st.markdown('<div class="name-title">KHOO SUK CHYI</div>', unsafe_allow_html=True)
 st.markdown('<div class="main-title">Interactive Professional Experience Explorer</div>', unsafe_allow_html=True)
-st.markdown('<div class="instruction">Enter a keyword, skill, or industry (e.g., "strategy", "policy", "negotiation") </div>', unsafe_allow_html=True)
+st.markdown('<div class="instruction">Enter a keyword, skill, or industry (e.g., “strategy”, “policy”, “negotiation”) </div>', unsafe_allow_html=True)
 
 # SEARCH INPUT
 query = st.text_input("", placeholder="Start typing here ...", label_visibility="collapsed")
