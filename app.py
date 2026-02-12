@@ -56,14 +56,33 @@ I draft contractual language that brings together divergent commercial, technica
 Worked closely with: Instructing solicitors, Engineering teams, Finance, Operations, Sales, Regulators.
 The job required multilingual fluency — not in literal languages, but in domain “dialects.”
 
-2.6 Conflict Resolution
-Grounded in the true purpose of dispute resolution: Prioritise settlement where possible, Establish common ground, Narrow issues pragmatically, Keep sight of the bigger picture.
+2.6 Investigation Fluency
+Fluent in the architecture of investigations — not just the steps, but the logic beneath them:
+•	Identifying the source and limits of investigative power
+•	Exercising discretion with precision
+•	Procedural fairness as both obligation and armour
+•	Witness interviews that surface signal, not script
+•	Report writing that lands with clarity and credibility
+•	Impartiality as discipline, not posture
+The question was never just "what happened." It was: by what authority are we asking, and are we asking fairly?
+
+2.7 Conflict Resolution
+Grounded in the true purpose of dispute resolution:
+•	Prioritise settlement where possible
+•	Establish common ground
+•	Narrow issues pragmatically
+•	Keep sight of the bigger picture
 One of the most profound professional muscles I developed: objective problem-solving in high-emotion environments.
 
-2.7 Relationship Building
+2.8 Relationship Building
 I once worked part-time as a barista.
-Lesson learned from my manager: "Being a barista isn’t just about making coffee — it’s about running the entire café."
-Practice was the same. It wasn’t just about arguing cases. It was about earning trust, building rapport, and forming durable partnerships with judges, regulators, and opposing counsel.
+Lesson learned from my manager:
+“Being a barista isn’t just about making coffee — it’s about running the entire café.”
+Practice was the same. It wasn’t just about arguing cases. It was about:
+•	Earning trust
+•	Building rapport
+•	Forming durable partnerships
+With judges, regulators, fellow members of the Bar, clients across divisions, and even opposing counsel.
 
 3. Arbitration Expertise (FCIArb)
 As a Fellow of the Chartered Institute of Arbitrators, I built expertise in: Complex cross-border disputes, Evidence-taking standards, Procedural fairness, Harmonising competing rules, Evaluating remedies.
