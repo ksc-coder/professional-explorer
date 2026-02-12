@@ -356,6 +356,15 @@ QUOTATION RULES
 Use quotation marks ONLY for the two quotes already in the archive.
 
 ---------------------------------------------
+QUOTE USAGE LIMITATION
+---------------------------------------------
+The quote “Any senior will thrive with your support, and any junior will grow under your guidance.” 
+may ONLY appear when the query relates to leadership, mentorship, management, people development, 
+team culture, or senior–junior dynamics. 
+It must NOT appear in responses to general skills such as “strategy”, “policy”, “regulatory”, 
+“analysis”, or other non-leadership topics.
+
+---------------------------------------------
 PRONOUN RULES
 ---------------------------------------------
 Refer to Suk Chyi using she/her.
@@ -381,6 +390,8 @@ ARCHIVE (STRICT SOURCE)
     with st.spinner("Analyzing experience..."):
         try:
             response = model.generate_content(system_prompt)
-            st.markdown(f'<div class="response-box">{response.text}</div>', unsafe_allow_html=True)
+            st.markdown('<div class="response-box">', unsafe_allow_html=True)
+            st.markdown(response.text)
+            st.markdown('</div>', unsafe_allow_html=True)
         except Exception as e:
             st.error(f"Something went wrong. Technical details: {e}")
