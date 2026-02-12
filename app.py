@@ -249,9 +249,9 @@ if query:
 # --- 6. RELOCATED BOTTOM CONTENT ---
 st.markdown(f"""
     <div class="bottom-container">
-        <div class="disclaimer-large">This document is not a credential. It is an attempt at one.</div>
+        <div class="disclaimer-large">A final note on method — and audacity:</div>
         <div class="description-body">
-            The premise: if you can architect knowledge for an AI — structure signal, strip noise, anticipate how it will be read and misread — you can probably architect it for a regulator, a boardroom, or a cross-functional task force. Same muscle. Different domain.
+            This document is not a credential. It is an attempt at one. The premise: if you can architect knowledge for an AI — structure signal, strip noise, anticipate how it will be read and misread — you can probably architect it for a regulator, a boardroom, or a cross-functional task force. Same muscle. Different domain.
             Is it perfect? Almost certainly not. But sending it anyway, in this form, to you? That takes a certain kind of confidence.
             Call it gall. Call it conviction. Either way, it should score for effort — and effort, in the right hands, is simply strategy in motion.
         </div>
