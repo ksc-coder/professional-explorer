@@ -227,10 +227,15 @@ if query:
     - If query is "Negotiation/Deal/Strategy": EXCLUDE court judgments (e.g., MyCC, CTOS). Focus on the Telco 5G and O&G deals.
     - If query is "Litigation/Court/Dispute": INCLUDE the court judgments.
 
-    STEP 3: FORMATTING (CRITICAL)
+    STEP 3: PRONOUN RULES (CRITICAL)
+    - ALWAYS start the first sentence with "Suk Chyi" (never "She").
+    - After the first mention, you may use "she/her" for subsequent references.
+    - Example: "Suk Chyi began her career..." NOT "She began her career..."
+
+    STEP 4: FORMATTING (CRITICAL)
     - Use DOUBLE LINE BREAKS (\\n\\n) between every paragraph.
     - Keep paragraphs short (2-4 lines).
-    - Tone: Polished, sophisticated, senior. Use "she/her".
+    - Tone: Polished, sophisticated, senior, subtly witty, confidently intelligent.
 
     ARCHIVE:
     {THE_ARCHIVE}
