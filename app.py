@@ -19,7 +19,7 @@ except Exception:
 
 # --- 2. YOUR KNOWLEDGE BASE (THE ARCHIVE) ---
 # Paste the content of your 'Markdown Knowledge Base.docx' here.
-# Keep the triple quotes ( \"\"\" ) at the top and bottom.
+# Keep the triple quotes ( """ ) at the top and bottom.
 THE_ARCHIVE = """
 Professional Knowledge Base (Markdown)
 A structured, high-signal, AI-friendly representation of experience, capabilities, and intellectual operating system.
@@ -28,7 +28,7 @@ ________________________________________
 I began my career in a litigation boutique where the margin for error was roughly the size of a misplaced comma.
 We were consistently the smallest team among Chambers & Partners and Legal500-ranked practices, which meant two things:
 1.	The work was never small.
-2.	You learned fast or you didn’t last.
+2.	You learned fast or you didn't last.
 I learned fast.
 My foundation was built in environments where precision, pace, and judgment mattered more than headcount. The work required moving seamlessly between statutory text, policy intent, commercial incentives, and human behaviour — often under tight timelines and high scrutiny.
 ________________________________________
@@ -52,7 +52,7 @@ Trained to:
 •	Build tight micro- and macro-level reasoning
 •	Anticipate industry-wide impacts
 •	Identify unintended consequences before they surface
-Ambiguity wasn’t a roadblock; it was the starting point.
+Ambiguity wasn't a roadblock; it was the starting point.
 ________________________________________
 2.3 Advocacy & Persuasion
 Strong oral and written advocacy, tailored to:
@@ -62,7 +62,7 @@ Strong oral and written advocacy, tailored to:
 •	Cross-functional teams
 •	Operational stakeholders
 My former boss once said:
-“How you ask your dad is never how you ask your mom.”
+"How you ask your dad is never how you ask your mom."
 A memorable way of teaching message-audience calibration — a skill that has since become a core part of my operating system.
 ________________________________________
 2.4 Negotiation & Stakeholder Alignment
@@ -81,7 +81,7 @@ Worked closely with:
 •	Sales
 •	Regulators
 •	Industry experts
-The job required multilingual fluency — not in literal languages, but in domain “dialects.”
+The job required multilingual fluency — not in literal languages, but in domain "dialects."
 ________________________________________
 2.6 Conflict Resolution
 Grounded in the true purpose of dispute resolution:
@@ -94,8 +94,8 @@ ________________________________________
 2.7 Relationship Building
 I once worked part-time as a barista.
 Lesson learned from my manager:
-“Being a barista isn’t just about making coffee — it’s about running the entire café.”
-Practice was the same. It wasn’t just about arguing cases. It was about:
+"Being a barista isn't just about making coffee — it's about running the entire café."
+Practice was the same. It wasn't just about arguing cases. It was about:
 •	Earning trust
 •	Building rapport
 •	Forming durable partnerships
@@ -111,9 +111,9 @@ As a Fellow of the Chartered Institute of Arbitrators, I built expertise in:
 ________________________________________
 4. Leadership & Mentorship
 As a Senior Associate, I managed and supervised junior team members.
-I was mentored by exceptional seniors, including Dato’ Malik Imtiaz Sarwar — and I’ve always aimed to be the senior I once needed.
+I was mentored by exceptional seniors, including Dato' Malik Imtiaz Sarwar — and I've always aimed to be the senior I once needed.
 A junior once told me:
-“Any senior will thrive with your support, and any junior will grow under your guidance.”
+"Any senior will thrive with your support, and any junior will grow under your guidance."
 Across 9+ years — intern → paralegal → pupil → associate → senior associate — I had front-row access to:
 •	Strategy
 •	Thought leadership
@@ -123,7 +123,7 @@ This shaped the backbone of my professional judgment.
 ________________________________________
 5. Key Impacts & Representative Matters
 Telecommunications & Infrastructure
-•	Advised Malaysia’s four major telcos on nationwide 5G implementation
+•	Advised Malaysia's four major telcos on nationwide 5G implementation
 •	Resolved multi-billion-ringgit disputes at the intersection of technology, law, and policy
 •	Provided competition, regulatory, and strategic advice
 Data & Fintech
@@ -140,7 +140,7 @@ Regulatory Enforcement
 •	Lead associate and second-chair in Securities Commission civil actions
 •	Represented a Big Four audit firm in judicial reviews on investigative findings
 Corporate Governance
-•	Advised on director liabilities, auditors’ duties, and internal governance for MNCs and GLCs
+•	Advised on director liabilities, auditors' duties, and internal governance for MNCs and GLCs
 Appellate Advocacy
 •	Regularly appeared before the Federal Court
 •	Contributed to jurisprudence on governance and accountability
@@ -164,18 +164,18 @@ Where I lack a specific experience, I bring a transferable playbook shaped by hi
 •	Systems-driven diagnostics
 •	Methodical problem framing
 •	Comfort with ambiguity
-•	Ability to scale what works and redesign what doesn’t
+•	Ability to scale what works and redesign what doesn't
 •	Muscle memory for breaking complexity into tractable components
 •	A horizontal, cross-domain leadership style
 ________________________________________
 8. Career Transition Rationale
 Litigation is the professional equivalent of firefighting in 99 buildings at once.
-I’m ready to sit at the table designing:
+I'm ready to sit at the table designing:
 •	the fire-prevention architecture
 •	the escalation pathways
 •	the governance frameworks
 that stop the fires from starting.
-This isn’t a step back — it’s a step toward strategic impact.
+This isn't a step back — it's a step toward strategic impact.
 ________________________________________
 9. Sabbatical (Since September 2025)
 After nearly a decade in practice, I took a purposeful sabbatical to broaden my aperture.
@@ -318,6 +318,19 @@ input::placeholder {
     margin-top: 30px;
 }
 
+/* Fix bullet point rendering */
+.response-box ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.response-box li {
+    margin-bottom: 5px;
+    display: list-item;
+    list-style-position: outside;
+}
+
 /* Animated underline for LinkedIn link */
 a.linkedin-link {
     position: relative;
@@ -351,8 +364,11 @@ st.markdown('<div class="name-title">KHOO SUK CHYI</div>', unsafe_allow_html=Tru
 st.markdown('<div class="main-title">Interactive Professional Experience Explorer</div>', unsafe_allow_html=True)
 st.markdown('<div class="instruction">Enter a keyword, skill, or industry (e.g., "strategy", "policy", "leadership") </div>', unsafe_allow_html=True)
 
-# Search Input (no extra box)
-query = st.text_input("", placeholder="Start typing here ...", label_visibility="collapsed")
+# Search Input (no extra box) - FIX: Use session state to prevent duplicate rendering
+if 'query' not in st.session_state:
+    st.session_state.query = ""
+
+query = st.text_input("", placeholder="Start typing here ...", label_visibility="collapsed", key="search_input")
 
 # Footer text — merged into one clean paragraph
 st.markdown(
@@ -373,7 +389,7 @@ st.markdown(
 )
 
 # ---------------------------------------------------
-# 5. AI ENGINE (UNCHANGED)
+# 5. AI ENGINE (IMPROVED)
 # ---------------------------------------------------
 
 if query:
@@ -396,22 +412,46 @@ FORMAT RULES (NON-NEGOTIABLE)
 1. All output must be written in short paragraphs of 2–4 lines.
 2. Insert exactly ONE blank line between paragraphs.
 3. No blank lines inside a paragraph.
-4. Bullet points only for lists of 3 or more items.
+4. When using bullet points for lists of 3+ items:
+   - Start the list on a NEW LINE after the preceding paragraph
+   - Use proper Markdown format with a dash and space: "- Item text"
+   - Each bullet item should be on its own line
+   - Add a blank line before AND after the entire bullet list
 5. A paragraph may contain multiple sentences but must appear as one continuous block.
 
 ---------------------------------------------
 QUOTATION RULES
 ---------------------------------------------
-Use quotation marks ONLY for the two quotes already in the archive.
+Use quotation marks ONLY for the two quotes already in the archive:
+- "How you ask your dad is never how you ask your mom."
+- "Being a barista isn't just about making coffee — it's about running the entire café."
+
+Do NOT use the leadership quote unless the query is specifically about leadership/mentorship.
 
 ---------------------------------------------
-QUOTE USAGE LIMITATION
+QUOTE USAGE LIMITATION (CRITICAL)
 ---------------------------------------------
-The quote “Any senior will thrive with your support, and any junior will grow under your guidance.” 
-may ONLY appear when the query relates to leadership, mentorship, management, people development, 
-team culture, or senior–junior dynamics. 
-It must NOT appear in responses to general skills such as “strategy”, “policy”, “regulatory”, 
-“analysis”, or other non-leadership topics.
+The quote "Any senior will thrive with your support, and any junior will grow under your guidance." 
+may ONLY appear when the query EXPLICITLY relates to:
+- leadership
+- mentorship
+- management
+- people development
+- team building
+- team culture
+- coaching
+- supervising
+- senior–junior dynamics
+
+It must NEVER appear for queries about:
+- policy
+- strategy
+- regulatory
+- analysis
+- negotiation
+- technical skills
+- domain expertise
+- industry knowledge
 
 ---------------------------------------------
 PRONOUN RULES
@@ -419,13 +459,37 @@ PRONOUN RULES
 Refer to Suk Chyi using she/her.
 
 ---------------------------------------------
+QUERY INTERPRETATION RULES (CRITICAL)
+---------------------------------------------
+Before generating a response, identify the PRIMARY focus of the query:
+
+If query = "policy" or "policy analysis" or "policy interpretation":
+- Focus EXCLUSIVELY on Section 2.1 (Statutory & Policy Interpretation)
+- Mention her work with Hansard, white papers, parliamentary debates, regulatory consultations
+- Highlight work with NGOs, regulators, think tanks
+- DO NOT include leadership content
+- DO NOT include the junior quote
+
+If query = "leadership" or "mentorship" or "management":
+- Focus on Section 4 (Leadership & Mentorship)
+- You MAY use the junior quote here
+
+If query = "strategy" or "strategic":
+- Focus on Sections 6 & 7 (Strategic Capabilities & Executive Operating System)
+- Mention problem decomposition, stakeholder alignment, pattern recognition
+
+For other queries:
+- Match to the most relevant section(s) in the archive
+- Stay focused on what's actually asked
+
+---------------------------------------------
 TRANSFERABILITY RULES
 ---------------------------------------------
 If the archive directly mentions "{query}":
-- Use explicit content.
+- Use explicit content from the relevant section ONLY.
 
-If not:
-1. Begin with: “The archive does not contain specific data on "{query}".”
+If not directly mentioned:
+1. Begin with: "The archive does not contain specific data on '{query}'."
 2. Then map only adjacent experience already in the archive.
 3. Never guess or invent.
 
