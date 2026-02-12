@@ -230,10 +230,12 @@ body {
     background-color: white;
 }
 
-/* Center the main content to 750px width */
+/* Reduce giant Streamlit top padding */
 .block-container {
     max-width: 750px !important;
     margin: auto;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
 }
 
 /* Name (big grey bold) */
@@ -242,7 +244,7 @@ body {
     font-weight: 700;
     color: #6f6f6f;
     margin-bottom: 5px;
-    margin-top: 20px;
+    text-align: left;
 }
 
 /* Main title (big black bold) */
@@ -251,6 +253,7 @@ body {
     font-weight: 700;
     color: black;
     margin-bottom: 25px;
+    text-align: left;
 }
 
 /* Instruction (medium grey bold) */
@@ -259,6 +262,7 @@ body {
     font-weight: 600;
     color: #6f6f6f;
     margin-bottom: 15px;
+    text-align: left;
 }
 
 /* Improve search bar appearance */
@@ -281,6 +285,7 @@ input::placeholder {
     font-size: 14px;
     color: #6f6f6f;
     margin-top: 20px;
+    text-align: left;
 }
 
 .disclaimer-small-bold {
@@ -292,6 +297,7 @@ input::placeholder {
 .contact-small {
     font-size: 14px;
     color: #6f6f6f;
+    text-align: left;
 }
 
 .contact-small-bold {
@@ -311,6 +317,7 @@ input::placeholder {
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     margin-top: 30px;
 }
+
 /* Animated underline for LinkedIn link */
 a.linkedin-link {
     position: relative;
