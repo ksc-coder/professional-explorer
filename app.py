@@ -202,6 +202,22 @@ a.linkedin-link::after {
 a.linkedin-link:hover::after {
     width: 100%;
 }
+/* Ensure white background on all devices */
+body { 
+    background-color: white !important; 
+}
+
+.stApp {
+    background-color: white !important;
+}
+
+.main {
+    background-color: white !important;
+}
+
+[data-testid="stAppViewContainer"] {
+    background-color: white !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
