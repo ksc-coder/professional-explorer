@@ -320,15 +320,21 @@ if query:
     QUERY: "{query}"
     """
 
-        with st.spinner("Analyzing experience..."):
+    # ------------------------------
+    # Correct indentation begins here
+    # ------------------------------
+    with st.spinner("Analyzing experience..."):
         try:
             response = model.generate_content(system_prompt)
             if response.text:
-                st.markdown(f'<div class="response-box">{response.text}</div>', unsafe_allow_html=True)
+                st.markdown(
+                    f'<div class="response-box">{response.text}</div>',
+                    unsafe_allow_html=True
+                )
         except Exception as e:
             st.error(f"Something went wrong. Technical details: {e}")
 
-        # Hide banner once the model finishes
+    # Hide banner once the model finishes
     st.markdown("""
         <script>
         const banner = window.parent.document.getElementById('mobile-loading');
