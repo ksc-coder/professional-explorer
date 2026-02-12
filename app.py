@@ -262,7 +262,7 @@ st.markdown(f"""
             Call it gall. Call it conviction. Either way, it should score for effort — and effort, in the right hands, is simply strategy in motion.
         </div>
         <div class="contact-small">
-            For clarification, confirmation, or the graceful correction of any hallucination, please contact Suk Chyi directly at:
+            NB: There are enough em-dashes here to flag this as AI-touched. For clarification, confirmation, or the graceful correction of any hallucination, please contact Suk Chyi directly at:
             <a href="https://www.linkedin.com/in/khoosukchyi" class="linkedin-link" target="_blank">www.linkedin.com/in/khoosukchyi</a>
         </div>
     </div>
