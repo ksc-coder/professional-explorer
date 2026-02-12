@@ -218,6 +218,39 @@ body {
 [data-testid="stAppViewContainer"] {
     background-color: white !important;
 }
+/* Force all Streamlit text inputs to be white on all devices */
+input, textarea {
+    background-color: #FFFFFF !important;
+    color: black !important;
+}
+
+/* Streamlit text input wrapper */
+.stTextInput > div > div {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 10px !important;
+}
+
+/* iOS/Android autofill overrides */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+/* Extra selector to catch mobile WebKit rendering */
+input[type="text"] {
+    background-color: white !important;
+    -webkit-appearance: none !important;
+}
+
+/* Override dark-mode user agent styling on mobile */
+@media (prefers-color-scheme: dark) {
+    input, textarea {
+        background-color: white !important;
+        color: black !important;
+        -webkit-text-fill-color: black !important;
+    }
+}
 </style>
 """, unsafe_allow_html=True)
 
