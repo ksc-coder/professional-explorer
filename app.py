@@ -1,10 +1,14 @@
 import streamlit as st
 import google.generativeai as genai
+import os
 
 # --- 1. THE ENGINE ---
-# PASTE YOUR KEY INSIDE THESE QUOTES
-import os
+# This pulls the key from the 'Vault' you just set up in Streamlit Cloud
 API_KEY = os.getenv("GOOGLE_API_KEY")
+
+if not API_KEY:
+    st.error("Connection Error: The API Key is not configured in Secrets.")
+    st.stop()
 
 try:
     genai.configure(api_key=API_KEY)
