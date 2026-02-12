@@ -251,6 +251,17 @@ input[type="text"] {
         -webkit-text-fill-color: black !important;
     }
 }
+/* Mobile loading banner */
+.loading-banner {
+    display: none;
+    background: #F1F5F9;
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #475569;
+    border: 1px solid #E2E8F0;
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -263,7 +274,24 @@ st.markdown('<div class="instruction">Enter a keyword, skill, or industry (e.g.,
 query = st.text_input("", placeholder="Start typing here ...", label_visibility="collapsed")
 
 # --- 5. LOGIC & GENERATION ---
+
+# Mobile loading banner placeholder (hidden until JS shows it)
+loading_placeholder = st.markdown(
+    '<div class="loading-banner" id="mobile-loading">Analyzing experience...</div>',
+    unsafe_allow_html=True
+)
+
 if query:
+    # Force loading banner to appear instantly on mobile
+    st.markdown("""
+        <script>
+        const banner = window.parent.document.getElementById('mobile-loading');
+        if (banner) { banner.style.display = 'block'; }
+        </script>
+        """,
+        unsafe_allow_html=True
+    )
+    
     system_prompt = f"""
     ROLE: You are a senior executive advisor for Suk Chyi.
     
@@ -292,13 +320,23 @@ if query:
     QUERY: "{query}"
     """
 
-    with st.spinner("Analyzing experience..."):
+        with st.spinner("Analyzing experience..."):
         try:
             response = model.generate_content(system_prompt)
             if response.text:
                 st.markdown(f'<div class="response-box">{response.text}</div>', unsafe_allow_html=True)
         except Exception as e:
             st.error(f"Something went wrong. Technical details: {e}")
+
+        # Hide banner once the model finishes
+    st.markdown("""
+        <script>
+        const banner = window.parent.document.getElementById('mobile-loading');
+        if (banner) { banner.style.display = 'none'; }
+        </script>
+        """,
+        unsafe_allow_html=True
+    )
 
 # --- 6. RELOCATED BOTTOM CONTENT ---
 st.markdown(f"""
