@@ -3,7 +3,6 @@ import google.generativeai as genai
 import os
 
 # --- 1. THE ENGINE ---
-# This pulls the key from the 'Vault' you just set up in Streamlit Cloud
 API_KEY = os.getenv("GOOGLE_API_KEY")
 
 if not API_KEY:
@@ -12,14 +11,11 @@ if not API_KEY:
 
 try:
     genai.configure(api_key=API_KEY)
-    # Changed to 'gemini-flash-latest' to fix the 404 error
     model = genai.GenerativeModel('gemini-flash-latest')
 except Exception:
     st.error("Engine failed to start. Please check your API key.")
 
-# --- 2. YOUR KNOWLEDGE BASE (THE ARCHIVE) ---
-# Paste the content of your 'Markdown Knowledge Base.docx' here.
-# Keep the triple quotes ( """ ) at the top and bottom.
+# --- 2. KNOWLEDGE BASE ---
 THE_ARCHIVE = """
 Professional Knowledge Base (Markdown)
 A structured, high-signal, AI-friendly representation of experience, capabilities, and intellectual operating system.
@@ -217,20 +213,15 @@ ________________________________________
 •	executive decision-making
 """
 
-# ---------------------------------------------------
-# 3. DESIGN — CLEAN, POLISHED VERSION
-# ---------------------------------------------------
-
+# --- 3. DESIGN ---
 st.set_page_config(page_title="KSC | Professional Experience Explorer", layout="centered")
 
 st.markdown("""
 <style>
-
 body {
     background-color: white;
 }
 
-/* Reduce giant Streamlit top padding */
 .block-container {
     max-width: 750px !important;
     margin: auto;
@@ -238,7 +229,6 @@ body {
     padding-bottom: 2rem !important;
 }
 
-/* Name (big grey bold) */
 .name-title {
     font-size: 40px;
     font-weight: 700;
@@ -247,7 +237,6 @@ body {
     text-align: left;
 }
 
-/* Main title (big black bold) */
 .main-title {
     font-size: 32px;
     font-weight: 700;
@@ -256,7 +245,6 @@ body {
     text-align: left;
 }
 
-/* Instruction (medium grey bold) */
 .instruction {
     font-size: 20px;
     font-weight: 600;
@@ -265,7 +253,6 @@ body {
     text-align: left;
 }
 
-/* Improve search bar appearance */
 input.stTextInput {
     border-radius: 10px !important;
     border: 1px solid #E2E8F0 !important;
@@ -273,14 +260,12 @@ input.stTextInput {
     background-color: #F8FAFC !important;
 }
 
-/* Placeholder text */
 input::placeholder {
     color: black !important;
     opacity: 1;
     font-size: 18px;
 }
 
-/* Footer small grey text */
 .description-small {
     font-size: 14px;
     color: #6f6f6f;
@@ -306,7 +291,6 @@ input::placeholder {
     color: #6f6f6f;
 }
 
-/* Response box */
 .response-box {
     background-color: #F8FAFC;
     padding: 30px;
@@ -318,7 +302,6 @@ input::placeholder {
     margin-top: 30px;
 }
 
-/* Fix bullet point rendering */
 .response-box ul {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -331,7 +314,6 @@ input::placeholder {
     list-style-position: outside;
 }
 
-/* Animated underline for LinkedIn link */
 a.linkedin-link {
     position: relative;
     text-decoration: none;
@@ -351,26 +333,17 @@ a.linkedin-link::after {
 a.linkedin-link:hover::after {
     width: 100%;
 }
-
 </style>
 """, unsafe_allow_html=True)
 
-
-# ---------------------------------------------------
-# 4. UI — EXACT TEXT YOU SPECIFIED (POLISHED LAYOUT)
-# ---------------------------------------------------
-
+# --- 4. UI ---
 st.markdown('<div class="name-title">KHOO SUK CHYI</div>', unsafe_allow_html=True)
 st.markdown('<div class="main-title">Interactive Professional Experience Explorer</div>', unsafe_allow_html=True)
 st.markdown('<div class="instruction">Enter a keyword, skill, or industry (e.g., "strategy", "policy", "leadership") </div>', unsafe_allow_html=True)
 
-# Search Input (no extra box) - FIX: Use session state to prevent duplicate rendering
-if 'query' not in st.session_state:
-    st.session_state.query = ""
+# Single search input
+query = st.text_input("", placeholder="Start typing here ...", label_visibility="collapsed")
 
-query = st.text_input("", placeholder="Start typing here ...", label_visibility="collapsed", key="search_input")
-
-# Footer text — merged into one clean paragraph
 st.markdown(
     """
     <div class="description-small">
@@ -381,130 +354,71 @@ st.markdown(
     </div>
 
     <div class="contact-small" style="margin-top: 12px;">
-        For clarifications or confirmation of any output, please contact Suk Chyi directly at:
+        For clarification or confirmation of any output, please contact Suk Chyi directly at:
         <a href="https://www.linkedin.com/in/khoosukchyi" class="contact-small-bold linkedin-link" target="_blank" style="margin-left: 3px; color: #6f6f6f;">www.linkedin.com/in/khoosukchyi</a>
     </div>
     """,
     unsafe_allow_html=True
 )
 
-# ---------------------------------------------------
-# 5. AI ENGINE (IMPROVED)
-# ---------------------------------------------------
-
+# --- 5. TWO-STEP AI PROCESS ---
 if query:
-    system_prompt = f"""
-    ROLE & PERSONA:
-    You are the "Experience Explorer" and a senior executive advisor for Suk Chyi. 
-    Your tone is polished, crisp, intellectually confident, and subtly witty—a breath of fresh air in a corporate world. 
-    Avoid tech-bro slang, corporate jargon, or "LinkedIn-cringe" enthusiasm. Think sophisticated, sharp, and high-signal.
-
-    STYLE REFERENCE (EMULATE THIS NARRATIVE):
-    "She began her career in a litigation boutique where the margin for error was a single misplaced comma. 
-    Consistently the smallest team among Chambers-ranked practices, it meant the work was never small. 
-    She learned fast because she had to. She reads laws the way engineers read system diagrams: holistically and contextually."
-
-    STRICT OPERATING RULES:
-
----------------------------------------------
-FORMAT RULES (NON-NEGOTIABLE)
----------------------------------------------
-1. All output must be written in short paragraphs of 2–4 lines.
-2. Insert exactly ONE blank line between paragraphs.
-3. No blank lines inside a paragraph.
-4. When using bullet points for lists of 3+ items:
-   - Start the list on a NEW LINE after the preceding paragraph
-   - Use proper Markdown format with a dash and space: "- Item text"
-   - Each bullet item should be on its own line
-   - Add a blank line before AND after the entire bullet list
-5. A paragraph may contain multiple sentences but must appear as one continuous block.
-
----------------------------------------------
-QUOTATION RULES
----------------------------------------------
-Use quotation marks ONLY for the two quotes already in the archive:
-- "How you ask your dad is never how you ask your mom."
-- "Being a barista isn't just about making coffee — it's about running the entire café."
-
-Do NOT use the leadership quote unless the query is specifically about leadership/mentorship.
-
----------------------------------------------
-QUOTE USAGE LIMITATION (CRITICAL)
----------------------------------------------
-The quote "Any senior will thrive with your support, and any junior will grow under your guidance." 
-may ONLY appear when the query EXPLICITLY relates to:
-- leadership
-- mentorship
-- management
-- people development
-- team building
-- team culture
-- coaching
-- supervising
-- senior–junior dynamics
-
-It must NEVER appear for queries about:
-- policy
-- strategy
-- regulatory
-- analysis
-- negotiation
-- technical skills
-- domain expertise
-- industry knowledge
-
----------------------------------------------
-PRONOUN RULES
----------------------------------------------
-Refer to Suk Chyi using she/her.
-
----------------------------------------------
-QUERY INTERPRETATION RULES (CRITICAL)
----------------------------------------------
-Before generating a response, identify the PRIMARY focus of the query:
-
-If query = "policy" or "policy analysis" or "policy interpretation":
-- Focus EXCLUSIVELY on Section 2.1 (Statutory & Policy Interpretation)
-- Mention her work with Hansard, white papers, parliamentary debates, regulatory consultations
-- Highlight work with NGOs, regulators, think tanks
-- DO NOT include leadership content
-- DO NOT include the junior quote
-
-If query = "leadership" or "mentorship" or "management":
-- Focus on Section 4 (Leadership & Mentorship)
-- You MAY use the junior quote here
-
-If query = "strategy" or "strategic":
-- Focus on Sections 6 & 7 (Strategic Capabilities & Executive Operating System)
-- Mention problem decomposition, stakeholder alignment, pattern recognition
-
-For other queries:
-- Match to the most relevant section(s) in the archive
-- Stay focused on what's actually asked
-
----------------------------------------------
-TRANSFERABILITY RULES
----------------------------------------------
-If the archive directly mentions "{query}":
-- Use explicit content from the relevant section ONLY.
-
-If not directly mentioned:
-1. Begin with: "The archive does not contain specific data on '{query}'."
-2. Then map only adjacent experience already in the archive.
-3. Never guess or invent.
-
----------------------------------------------
-ARCHIVE (STRICT SOURCE)
----------------------------------------------
-{THE_ARCHIVE}
-
-"""
-
     with st.spinner("Analyzing experience..."):
         try:
-            response = model.generate_content(system_prompt)
+            # STEP 1: Identify relevant sections
+            extraction_prompt = f"""
+You are analyzing the query: "{query}"
+
+From the archive below, identify ONLY the section numbers that are directly relevant to this query.
+
+MATCHING RULES:
+- "negotiation" or "deal" or "stakeholder alignment" → Section 2.4 and Section 5 (Energy & Geopolitics, Telecommunications)
+- "policy" or "statutory" or "legislation" → Section 2.1 ONLY
+- "leadership" or "mentorship" or "management" or "team" → Section 4 ONLY
+- "strategy" or "strategic thinking" or "problem-solving" → Sections 6 and 7 ONLY
+- "arbitration" → Section 3 ONLY
+- "advocacy" → Section 2.3 ONLY
+
+Return ONLY the section numbers as a comma-separated list. For example: "2.4, 5" or "2.1" or "4"
+
+If the query doesn't match any specific section, return: "GENERAL"
+
+ARCHIVE:
+{THE_ARCHIVE}
+
+RELEVANT SECTIONS:"""
+
+            extraction_response = model.generate_content(extraction_prompt)
+            relevant_sections = extraction_response.text.strip()
+            
+            # STEP 2: Generate formatted response using ONLY those sections
+            generation_prompt = f"""
+You are writing about Suk Chyi's experience related to: "{query}"
+
+RELEVANT ARCHIVE SECTIONS: {relevant_sections}
+
+STRICT CONTENT RULES:
+1. Use ONLY information from the sections identified above
+2. DO NOT mix in content from other sections
+3. The quote "Any senior will thrive with your support, and any junior will grow under your guidance" may ONLY be used if Section 4 is in the relevant sections
+4. Write in polished, sophisticated tone
+5. Use she/her pronouns
+
+FORMAT:
+- Short paragraphs (2-4 lines each)
+- One blank line between paragraphs
+- For bullet lists: start on new line, use "- " format, blank lines before and after list
+
+ARCHIVE:
+{THE_ARCHIVE}
+
+Generate a focused, high-signal response about Suk Chyi's experience with "{query}"."""
+
+            response = model.generate_content(generation_prompt)
+            
             st.markdown('<div class="response-box">', unsafe_allow_html=True)
             st.markdown(response.text)
             st.markdown('</div>', unsafe_allow_html=True)
+            
         except Exception as e:
             st.error(f"Something went wrong. Technical details: {e}")
