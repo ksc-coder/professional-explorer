@@ -218,7 +218,7 @@ ________________________________________
 """
 
 # ---------------------------------------------------
-# 3. DESIGN — EXACTLY AS YOU SPECIFIED
+# 3. DESIGN — CLEAN, POLISHED VERSION
 # ---------------------------------------------------
 
 st.set_page_config(page_title="KSC | Professional Experience Explorer", layout="centered")
@@ -230,12 +230,19 @@ body {
     background-color: white;
 }
 
+/* Center the main content to 750px width */
+.block-container {
+    max-width: 750px !important;
+    margin: auto;
+}
+
 /* Name (big grey bold) */
 .name-title {
     font-size: 40px;
     font-weight: 700;
     color: #6f6f6f;
     margin-bottom: 5px;
+    margin-top: 20px;
 }
 
 /* Main title (big black bold) */
@@ -243,7 +250,7 @@ body {
     font-size: 32px;
     font-weight: 700;
     color: black;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 /* Instruction (medium grey bold) */
@@ -251,7 +258,15 @@ body {
     font-size: 20px;
     font-weight: 600;
     color: #6f6f6f;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Improve search bar appearance */
+input.stTextInput {
+    border-radius: 10px !important;
+    border: 1px solid #E2E8F0 !important;
+    padding: 14px !important;
+    background-color: #F8FAFC !important;
 }
 
 /* Placeholder text */
@@ -272,7 +287,6 @@ input::placeholder {
     font-size: 14px;
     font-weight: 600;
     color: #6f6f6f;
-    margin-top: 5px;
 }
 
 .contact-small {
@@ -301,27 +315,40 @@ input::placeholder {
 </style>
 """, unsafe_allow_html=True)
 
+
 # ---------------------------------------------------
-# 4. UI — EXACT TEXT YOU SPECIFIED
+# 4. UI — EXACT TEXT YOU SPECIFIED (POLISHED LAYOUT)
 # ---------------------------------------------------
 
 st.markdown('<div class="name-title">KHOO SUK CHYI</div>', unsafe_allow_html=True)
 st.markdown('<div class="main-title">Interactive Professional Experience Explorer</div>', unsafe_allow_html=True)
 st.markdown('<div class="instruction">Enter a keyword, skill, or industry (e.g., "strategy", "policy", "leadership") </div>', unsafe_allow_html=True)
 
-query = st.text_input(" ", placeholder="Start typing here ...")
+# Search Input (no extra box)
+query = st.text_input("", placeholder="Start typing here ...", label_visibility="collapsed")
 
-st.markdown(f"""
+# Footer text — merged into one clean paragraph
+st.markdown(
+    """
     <div class="description-small">
-        <span>This is a high-signal, interactive map of a legal career.</span>
-        <span class="disclaimer-small-bold" style="margin-left: 5px;">It is neither a CV nor a chatbot.</span>
+        This is a high-signal, interactive map of a legal career.
+        <span class="disclaimer-small-bold" style="margin-left: 5px;">
+            It is neither a CV nor a chatbot.
+        </span>
     </div>
-    <div class="contact-small" style="margin-top: 15px;">
-        <span>For clarifications or confirmation of any output, </span>
-        <span class="contact-small">please contact Suk Chyi directly at:</span>
-        <a href="https://www.linkedin.com/in/khoosukchyi" class="contact-small-bold" target="_blank" style="margin-left: 3px; color: #6f6f6f;">www.linkedin.com/in/khoosukchyi</a>
+
+    <div class="contact-small" style="margin-top: 12px;">
+        For clarifications or confirmation of any output, please contact Suk Chyi directly at:
+        <a href="https://www.linkedin.com/in/khoosukchyi" 
+           class="contact-small-bold" 
+           target="_blank" 
+           style="margin-left: 4px; color: #6f6f6f;">
+           www.linkedin.com/in/khoosukchyi
+        </a>
     </div>
-    """, unsafe_allow_html=True)
+    """,
+    unsafe_allow_html=True
+)
 
 # ---------------------------------------------------
 # 5. AI ENGINE (UNCHANGED)
