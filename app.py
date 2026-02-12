@@ -170,7 +170,7 @@ input::placeholder {
 /* Footer & Relocated Paragraphs */
 .bottom-container { margin-top: 60px; border-top: 1px solid #F1F5F9; padding-top: 20px; }
 .disclaimer-large { font-size: 18px; font-weight: 700; color: #475569; margin-bottom: 10px; }
-.description-body { font-size: 15px; color: #64748b; line-height: 1.6; margin-bottom: 10px; }
+.description-body { font-size: 15px; color: #64748b; line-height: 1.6; margin-bottom: 10px; text-align: justify; }
 .contact-small { font-size: 14px; color: #6f6f6f; margin-top: 0; }
 a { text-decoration: none; color: #6f6f6f; }
 a:hover { text-decoration: underline; }
