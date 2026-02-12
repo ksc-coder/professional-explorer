@@ -233,7 +233,7 @@ if query:
     STEP 1: CHECK FOR DATA EXISTENCE
     - Does the specific term "{query}" appear in the Archive?
     - YES: Proceed to describe her experience directly.
-    - NO: You MUST start the response with this exact phrase: "The archive does not contain specific data on '{query}'." Then, and only then, bridge to her transferable skills (e.g., "However, her experience in [X] demonstrates...").
+    - NO: You MUST start the response with this exact phrase: "The archive does not seem to contain specific data on '{query}'." Then, and only then, bridge to her transferable skills (e.g., "However, her experience in [X] demonstrates...").
 
     STEP 2: CHECK FOR CONTEXT (NEGOTIATION VS LITIGATION)
     - If query is "Negotiation/Deal/Strategy": EXCLUDE court judgments (e.g., MyCC, CTOS). Focus on the Telco 5G and O&G deals.
