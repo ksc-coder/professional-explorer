@@ -353,9 +353,7 @@ FORMAT RULES (NON-NEGOTIABLE)
 ---------------------------------------------
 QUOTATION RULES
 ---------------------------------------------
-Use quotation marks ONLY for:
-- the exact search keyword "{query}"
-- the two quotes already in the archive.
+Use quotation marks ONLY for the two quotes already in the archive.
 
 ---------------------------------------------
 PRONOUN RULES
