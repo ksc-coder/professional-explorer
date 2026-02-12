@@ -140,7 +140,7 @@ input.stTextInput {
     background-color: #F8FAFC !important;
     color: #1E293B !important;
 }
-/* Focus State - Subtle Blue/Grey to match your image */
+/* Focus State - Green/Grey to match request */
 input.stTextInput:focus {
     border-color: #94a3b8 !important;
     box-shadow: 0 0 0 2px rgba(148, 163, 184, 0.2) !important;
@@ -159,6 +159,10 @@ input::placeholder {
     color: #334155;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     margin-top: 30px;
+}
+/* Paragraph spacing fix */
+.response-box p {
+    margin-bottom: 1.5em; /* Force space between paragraphs */
 }
 .response-box ul { margin-top: 10px; padding-left: 20px; }
 .response-box li { margin-bottom: 5px; }
@@ -186,7 +190,7 @@ st.markdown('<div class="name-title">KHOO SUK CHYI</div>', unsafe_allow_html=Tru
 st.markdown('<div class="main-title">Interactive Professional Experience Explorer</div>', unsafe_allow_html=True)
 st.markdown('<div class="instruction">Enter a keyword, skill, or industry (e.g., "strategy", "policy", "leadership") </div>', unsafe_allow_html=True)
 
-# THE ONLY SEARCH INPUT
+# SEARCH INPUT
 query = st.text_input("", placeholder="Start typing here ...", label_visibility="collapsed")
 
 # FOOTER
@@ -205,34 +209,31 @@ st.markdown("""
 if query:
     system_prompt = f"""
     ROLE: You are a senior executive advisor for Suk Chyi.
-    TASK: Answer the query "{query}" using ONLY the provided archive.
+    
+    STEP 1: CHECK FOR DATA EXISTENCE
+    - Does the specific term "{query}" appear in the Archive?
+    - YES: Proceed to describe her experience directly.
+    - NO: You MUST start the response with this exact phrase: "The archive does not contain specific data on '{query}'." Then, and only then, bridge to her transferable skills (e.g., "However, her experience in [X] demonstrates...").
 
-    CRITICAL RULES FOR "NEGOTIATION" vs "LITIGATION":
-    1. If the query is about "Negotiation", "Stakeholder Alignment", or "Commercial Strategy":
-       - You MUST include: The 5G Telco deal and the O&G/State Government negotiation.
-       - You MUST EXCLUDE: The "E-hailing/MyCC" case and the "Credit Score/CTOS" case. These are COURT WINS (Litigation/Judicial Review), not negotiations. 
-       - Do not confuse "winning a case" with "negotiating a deal".
+    STEP 2: CHECK FOR CONTEXT (NEGOTIATION VS LITIGATION)
+    - If query is "Negotiation/Deal/Strategy": EXCLUDE court judgments (e.g., MyCC, CTOS). Focus on the Telco 5G and O&G deals.
+    - If query is "Litigation/Court/Dispute": INCLUDE the court judgments.
 
-    2. If the query is about "Litigation", "Court", or "Disputes":
-       - Then you MAY include the E-hailing, Credit Score, and Securities Commission cases.
-
-    TONE:
-    - Polished, sophisticated, senior.
-    - Use "she/her".
-    - Short paragraphs (2-4 lines).
+    STEP 3: FORMATTING (CRITICAL)
+    - Use DOUBLE LINE BREAKS (\\n\\n) between every paragraph.
+    - Keep paragraphs short (2-4 lines).
+    - Tone: Polished, sophisticated, senior. Use "she/her".
 
     ARCHIVE:
     {THE_ARCHIVE}
+    
+    QUERY: "{query}"
     """
 
     with st.spinner("Analyzing experience..."):
         try:
-            # Single-step generation for speed and accuracy
             response = model.generate_content(system_prompt)
-            
-            # Only render the box if we have a response
             if response.text:
                 st.markdown(f'<div class="response-box">{response.text}</div>', unsafe_allow_html=True)
-                
         except Exception as e:
             st.error(f"Something went wrong. Technical details: {e}")
