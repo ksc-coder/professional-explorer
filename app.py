@@ -167,11 +167,11 @@ input::placeholder {
 .response-box ul { margin-top: 10px; padding-left: 20px; }
 .response-box li { margin-bottom: 5px; }
 
-/* Footer */
-.description-small { font-size: 14px; color: #6f6f6f; margin-top: 20px; text-align: left; }
-.disclaimer-small-bold { font-size: 14px; font-weight: 600; color: #6f6f6f; }
-.contact-small { font-size: 14px; color: #6f6f6f; text-align: left; margin-top: 12px; }
-.contact-small-bold { font-size: 14px; font-weight: 600; color: #6f6f6f; }
+/* Footer & Relocated Paragraphs */
+.bottom-container { margin-top: 60px; border-top: 1px solid #F1F5F9; padding-top: 20px; }
+.disclaimer-large { font-size: 18px; font-weight: 700; color: #475569; margin-bottom: 10px; }
+.description-body { font-size: 15px; color: #64748b; line-height: 1.6; margin-bottom: 20px; }
+.contact-small { font-size: 14px; color: #6f6f6f; margin-top: 12px; }
 a { text-decoration: none; color: #6f6f6f; }
 a:hover { text-decoration: underline; }
 
@@ -213,24 +213,6 @@ st.markdown('<div class="instruction">Enter a keyword, skill, or industry (e.g.,
 # SEARCH INPUT
 query = st.text_input("", placeholder="Start typing here ...", label_visibility="collapsed")
 
-# FOOTER
-st.markdown("""
-    <div class="disclaimer-small-bold"
-        A final note on method — and audacity:
-    <div class="description-small">
-        This document is not a credential. It is a demonstration.
-        </div>
-        It reflects how Suk Chyi thinks: structurally, contextually, with an eye on both the system and the user on the other side of it. The medium is the message — if you can architect knowledge for an AI, you can architect it for a regulator, a boardroom, or a cross-functional task force.
-        </div>
-        Is it perfect? Almost certainly not. But sending it anyway, to you, in this form? That takes a certain kind of confidence.
-        </div>
-        Call it gall. Call it conviction. Either way, it scores for effort — and effort, in the right hands, is simply strategy in motion.
-        </div>
-        For clarification or confirmation of any output, please contact Suk Chyi directly at:
-        <a href="https://www.linkedin.com/in/khoosukchyi" class="contact-small-bold linkedin-link" target="_blank" style="margin-left: 3px; color: #6f6f6f;">www.linkedin.com/in/khoosukchyi</a>
-    </div>
-    """, unsafe_allow_html=True)
-
 # --- 5. LOGIC & GENERATION ---
 if query:
     system_prompt = f"""
@@ -263,3 +245,19 @@ if query:
                 st.markdown(f'<div class="response-box">{response.text}</div>', unsafe_allow_html=True)
         except Exception as e:
             st.error(f"Something went wrong. Technical details: {e}")
+
+# --- 6. RELOCATED BOTTOM CONTENT ---
+st.markdown(f"""
+    <div class="bottom-container">
+        <div class="disclaimer-large">This document is not a credential. It is an attempt at one.</div>
+        <div class="description-body">
+            The premise: if you can architect knowledge for an AI — structure signal, strip noise, anticipate how it will be read and misread — you can probably architect it for a regulator, a boardroom, or a cross-functional task force. Same muscle. Different domain.
+            Is it perfect? Almost certainly not. But sending it anyway, in this form, to you? That takes a certain kind of confidence.
+            Call it gall. Call it conviction. Either way, it scores for effort — and effort, in the right hands, is simply strategy in motion.
+        </div>
+        <div class="contact-small">
+            For clarification, confirmation, or the graceful correction of any hallucination, please contact Suk Chyi directly at:
+            <a href="https://www.linkedin.com/in/khoosukchyi" class="linkedin-link" target="_blank">www.linkedin.com/in/khoosukchyi</a>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
