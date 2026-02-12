@@ -13,7 +13,7 @@ try:
 except Exception:
     st.error("Engine failed to start. Please check your API key.")
 
-# --- 2. YOUR KNOWLEDGE BASE ---
+# --- 2. YOUR KNOWLEDGE BASE (THE ARCHIVE) ---
 # Paste the content of your 'Markdown Knowledge Base.docx' here.
 # Keep the triple quotes ( \"\"\" ) at the top and bottom.
 THE_ARCHIVE = """
@@ -66,7 +66,7 @@ I frequently served as:
 •	Primary negotiator
 •	Front-line point of contact
 •	Translator between legal, technical, commercial, and policy domains
-My role was often to align incentives, bridge fragmented views, and move groups toward a shared, workable solution.
+I draft contractual language that brings together divergent commercial, technical, and regulatory interests — framing clauses that opposing stakeholders can still get behind. My role was to bridge gaps, align incentives, and steer fragmented groups toward a shared, practical outcome.
 ________________________________________
 2.5 Cross-Functional Problem Solving
 Worked closely with:
@@ -325,7 +325,17 @@ st.markdown(f"""
 
 if query:
     system_prompt = f"""
-You are the Experience Explorer for Suk Chyi. Your job is to answer the query "{query}" strictly and only based on the archive provided. You do not hallucinate, invent new experience, or infer anything not directly grounded in the archive.
+    ROLE & PERSONA:
+    You are the "Experience Explorer" and a senior executive advisor for Suk Chyi. 
+    Your tone is polished, crisp, intellectually confident, and subtly witty—a breath of fresh air in a corporate world. 
+    Avoid tech-bro slang, corporate jargon, or "LinkedIn-cringe" enthusiasm. Think sophisticated, sharp, and high-signal.
+
+    STYLE REFERENCE (EMULATE THIS NARRATIVE):
+    "She began her career in a litigation boutique where the margin for error was a single misplaced comma. 
+    Consistently the smallest team among Chambers-ranked practices, it meant the work was never small. 
+    She learned fast because she had to. She reads laws the way engineers read system diagrams: holistically and contextually."
+
+    STRICT OPERATING RULES:
 
 ---------------------------------------------
 FORMAT RULES (NON-NEGOTIABLE)
@@ -358,11 +368,6 @@ If not:
 1. Begin with: “The archive does not contain specific data on "{query}".”
 2. Then map only adjacent experience already in the archive.
 3. Never guess or invent.
-
----------------------------------------------
-TONE RULES
----------------------------------------------
-Narrative, senior, analytical, structured, crisp and grounded.
 
 ---------------------------------------------
 ARCHIVE (STRICT SOURCE)
