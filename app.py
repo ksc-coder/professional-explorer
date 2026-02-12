@@ -66,7 +66,14 @@ Fluent in the architecture of investigations — not just the steps, but the log
 •	Impartiality as discipline, not posture
 The question was never just "what happened." It was: by what authority are we asking, and are we asking fairly?
 
-2.7 Conflict Resolution
+2.7 Cross-Border Exposure
+Cross-border work has featured across:
+•	Tracing evidence, funds, and liability in fraud claims
+•	International arbitration
+•	Jurisdictional challenges and enforcement actions
+The work required navigating different procedural expectations, evidence rules, and enforcement regimes — not as a specialist, but as counsel who couldn't afford to treat borders as stop signs.
+
+2.8 Conflict Resolution
 Grounded in the true purpose of dispute resolution:
 •	Prioritise settlement where possible
 •	Establish common ground
@@ -74,7 +81,7 @@ Grounded in the true purpose of dispute resolution:
 •	Keep sight of the bigger picture
 One of the most profound professional muscles I developed: objective problem-solving in high-emotion environments.
 
-2.8 Relationship Building
+2.9 Relationship Building
 I once worked part-time as a barista.
 Lesson learned from my manager:
 “Being a barista isn’t just about making coffee — it’s about running the entire café.”
