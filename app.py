@@ -324,15 +324,14 @@ if query:
 # --- 6. RELOCATED BOTTOM CONTENT ---
 st.markdown(f"""
     <div class="bottom-container">
-        <div class="disclaimer-large">A note on method — and audacity:</div>
+        <div class="disclaimer-large">A note on method — and intent:</div>
         <div class="description-body">
-            This document is not a credential. It is an attempt at one.<br>
+            The Explorer is an experiment in knowledge architecture. The premise is simple: if one can structure signals, strip noise, and anticipate how information will be parsed by an AI, one can do the same for a regulator, a boardroom, or a cross-functional task force. It is the same muscle; it is simply a different domain.<br>
             The premise: if you can architect knowledge for an AI — structure signal, strip noise, anticipate how it will be read and misread — you can probably architect it for a regulator, a boardroom, or a cross-functional task force. Same muscle. Different domain.<br>
-            Is it perfect? Absolutely not. But sending it anyway, in this form, to you? That takes a certain kind of confidence.<br>
-            Call it gall. Call it conviction. Either way, it should score for effort — and effort, in the right hands, is simply strategy in motion.
+            Is the output perfect? Rarely. But deploying it anyway reflects a specific conviction: that in an era of complexity, the ability to define problems and reaggregate them into solutions is the highest-value skill an advisor can offer.<br>
         </div>
         <div class="contact-small">
-            NB: There are enough em-dashes here to flag this as AI-touched. For clarification, confirmation, or the graceful correction of any hallucination, please contact Suk Chyi directly at:
+            NB: There are enough em-dashes here to flag this as AI-augmented. For the correction of any hallucinations or a more “analog” conversation, please contact Suk Chyi directly at:
             <a href="https://www.linkedin.com/in/khoosukchyi" class="linkedin-link" target="_blank">www.linkedin.com/in/khoosukchyi</a>.
         </div>
     </div>
