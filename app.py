@@ -18,34 +18,44 @@ except Exception as e:
 
 # --- 2. KNOWLEDGE BASE ---
 THE_ARCHIVE = """
-[SECTION: PROFESSIONAL BRAND]
-**The Pivot:** Transitioning from "Professional Firefighting" (Litigation) to "Fire-Prevention Architecture" (Strategic Governance). 
-**The Value Prop:** I don't just solve disputes; I design the escalation pathways and governance frameworks that stop them from starting.
-**The "Small Team" Muscle:** Forged at a boutique firm. Expertise in "Force Multiplier" leadership—using process automation to achieve results usually reserved for armies of associates.
-**Leadership Style:** Horizontal. A methodical, systems-driven approach to fixing broken processes. Comfortable with ambiguity.
+Professional Knowledge Base (Markdown)
 
-[SECTION: HIGH-IMPACT METRICS & CASES]
-* **Telecommunications (5G Infrastructure):** Advised Malaysia’s four major telcos on the multi-billion-ringgit nationwide 5G rollout. Resolved disputes at the intersection of technology, competition law, and national policy.
-* **Fintech & Data (Landmark Win):** Secured a precedent-setting win for a major credit reporting agency regarding algorithm-based scoring. Provided industry-wide regulatory certainty. **Outcome: Directly contributed to a 5% rise in client share price.**
-* **Competition Law (E-Hailing):** Challenged a **RM86 million proposed penalty** by the Malaysian Competition Commission (MyCC) for a major SE Asian platform. Focused on procedural propriety and abuse of dominance standards.
-* **Energy & Geopolitics:** Negotiated between a **Fortune Global 500 O&G company** and a state government. Balanced commercial interests against sensitive national ownership disputes and statutory authority.
-* **Regulatory Defense:** Defended corporate directors in Securities Commission civil actions. Represented a "Big Four" audit firm in judicial reviews regarding investigative powers.
+1. The Executive Narrative (The "Why")
+**From Firefighting to Architecture:**
+"Litigation is the professional equivalent of firefighting in 99 buildings at once. I’m ready to sit at the table designing the fire-prevention architecture, the escalation pathways, and the governance frameworks that stop the fires from starting."
+**The Value Proposition:**
+I don't just argue the law; I translate it. I bridge the gap between rigid regulatory frameworks and fluid commercial goals. My background is in high-stakes dispute resolution, which means I have been trained to identify the point of failure before a project even launches.
 
-[SECTION: CORE SKILLS & "THE PLAYBOOK"]
-* **Statutory Interpretation:** Reads legislation like an engineer reads a schematic. Routinely engages with Hansard and white papers to identify "policy mischief" behind the law.
-* **Negotiation:** Acts as a "translator" between commercial, technical, and regulatory dialects. Drafts "win-win" clauses that opposing stakeholders can back.
-* **Investigation Fluency:** Deep mastery of procedural fairness (show-cause), witness interviews, and maintaining the "actual and impression" of impartiality.
-* **Process Improvement:** Architect of internal workflows that compress turnaround times. 
-* **International Arbitration (FCIArb):** Fellow of the Chartered Institute of Arbitrators. Expert in cross-border evidence-taking and harmonizing procedural protocols.
+2. Strategic Impact & Commercial Value (The "What")
+* **Regulatory Strategy (5G Implementation):** Advised Malaysia’s four major telcos on nationwide 5G rollout. This wasn't just a legal dispute; it was a multi-billion-ringgit alignment of technology, competition policy, and national infrastructure.
+    * *Skill:* Navigating the intersection of public policy and private commercial interest.
+* **Commercial Certainty (Fintech/CTOS):** Secured a landmark win validating algorithm-based credit scoring.
+    * *Impact:* Provided industry-wide regulatory certainty and directly contributed to a **5% rise in share price** for the client.
+    * *Takeaway:* Legal strategy that drives tangible market value.
+* **Crisis Management (Antitrust/MyCC):** Managed a high-profile challenge against a proposed **RM86 million penalty** for a major Southeast Asian e-hailing platform.
+    * *Focus:* Procedural propriety and checking investigative overreach.
+    * *Skill:* Keeping cool when the numbers are large and the timeline is short.
+* **Geopolitical Negotiation (Energy):** Acted for a Fortune Global 500® O&G company in sensitive negotiations with a state government involving national resource ownership.
+    * *Skill:* Balancing statutory interpretation with diplomatic nuance.
 
-[SECTION: LEADERSHIP & PHILOSOPHY]
-* **The "Barista" Principle:** (Derived from early work experience) A role is never just a task; it is about "running the entire café." Managing trust and rapport with judges, regulators, and internal ops teams is as vital as the legal argument.
-* **Mentorship:** "Any senior will thrive with your support, and any junior will grow under your guidance."
+3. The "Operating System" (The "How")
+* **The "Small Team" Efficiency:** Bred in a boutique firm where we were consistently the smallest team against the biggest names.
+    * *Result:* I treat process as a force multiplier. I build workflows to compress turnaround times and automate admin so I can focus on strategy. I don't need an army; I need a plan.
+* **The "Barista" Principle:** (Derived from early work experience). "Being a barista isn’t just about making coffee; it’s about running the café."
+    * *Application:* In-house, this means I don't just "do legal." I view the business holistically—understanding how a contract affects Ops, Finance, and Sales.
+* **Interpretation Philosophy:** I read legislation the way engineers read schematics: holistically and structurally. I look for the "mischief" (policy intent) behind the rule, not just the literal text.
 
-[SECTION: EDUCATION & CURRENT STATUS]
-* **Sabbatical (2025-Present):** Focused on Fintech (HKU), Crisis Management (Dartmouth), and Leadership (Harvard).
-* **Current Goal:** Bridging the gap between traditional governance and modern data privacy.
-* **Status:** Studying for CIPP/E (European Data Protection). Job hunting for strategic governance roles.
+4. Functional Competencies
+* **Investigation Fluency:** Deep experience in the architecture of investigations—identifying the limits of power, ensuring procedural fairness, and conducting witness interviews that separate signal from noise.
+* **Stakeholder Management:** Frequently served as the "translator" between technical teams (engineers), commercial teams (C-suite), and regulatory bodies. I draft language that aligns divergent interests.
+* **Cross-Border Agility:** Fellow of the Chartered Institute of Arbitrators (FCIArb). Expert in harmonizing differing procedural rules and navigating international enforcement.
+
+5. Future Focus & Upskilling (2025-Present)
+* **Current Status:** Transitioning from practice to strategic/in-house roles.
+* **Sabbatical Focus:** Bridging the gap between traditional law and future tech.
+    * *Fintech:* Blockchain ethics and asset compliance (HKU).
+    * *Crisis Comms:* Strategic reputational risk (Dartmouth).
+    * *Data Privacy:* Preparing for CIPP/E (European Data Protection).
 """
 
 # --- 3. DESIGN ---
@@ -240,22 +250,19 @@ if query:
     - YES: Proceed to describe her experience directly.
     - NO: You MUST start the response with this exact phrase: "The archive does not seem to contain specific data on '{query}'." Then, and only then, bridge to her transferable skills (e.g., "However, her experience in [X] demonstrates...").
 
-   STEP 2: PRIORITIZE METRICS & HARD FACTS
-    - If the user asks about "Impact," "Results," or "Achievements," you MUST cite the specific numbers (e.g., "5% share price increase," "RM86 million penalty," "Multi-billion 5G rollout").
-    - Avoid generic fluff. Use the "Dense Fact" modules from the archive to ground your answer.
+   STEP 2: CONTEXTUAL REFRAMING (CRITICAL)
+    - **If query is about "Litigation/Court":** Discuss the cases (MyCC, Federal Court) as legal victories.
+    - **If query is about "Strategy/In-House/Management":** Reframe the litigation experience as "Risk Management" and "Crisis Prevention." Focus on the *commercial impact* (e.g., the 5% share price, the 5G rollout) rather than the legal argument. 
+    - **If query is about "Why/Transition":** Use the "Firefighting vs. Architecture" narrative.
 
-    STEP 3: CONTEXT AWARENESS
-    - If query is "Negotiation/Deal/Strategy": Focus on the Telco 5G, O&G deals, and the "Fire-Prevention" philosophy.
-    - If query is "Litigation/Court/Dispute": Focus on the MyCC (Competition), Fintech, and Big Four cases.
-
-    STEP 4: PRONOUN RULES (CRITICAL)
+    STEP 3: PRONOUN RULES (CRITICAL)
     - ALWAYS start the first sentence with "Suk Chyi" (never "She").
     - After the first mention, you may use "she/her" for subsequent references.
    
-    STEP 5: FORMATTING (CRITICAL)
+    STEP 4: FORMATTING (CRITICAL)
     - Use DOUBLE LINE BREAKS (\\n\\n) between every paragraph.
     - Keep paragraphs short (2-4 lines).
-    - Tone: Polished, sophisticated, senior, subtly witty, confidently intelligent.
+    - Tone: Polished, sophisticated, senior, subtly witty, confidently intelligent. Avoid "resume speak"—sound like a peer discussing a colleague.
     - Treat the user as a peer (another executive), not a junior.
 
     ARCHIVE:
