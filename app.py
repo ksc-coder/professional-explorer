@@ -330,7 +330,7 @@ st.markdown(f"""
             Is the output perfect? Rarely. But deploying it anyway reflects a specific conviction: that in an era of complexity, the ability to define problems and reaggregate them into solutions is the highest-value skill an advisor can offer.<br>
         </div>
         <div class="contact-small">
-            NB: There are enough em-dashes here to flag this as AI-augmented. For the correction of any hallucinations or a more “analog” conversation, please contact Suk Chyi directly at:
+            NB: For the correction of any hallucinations or a more “analog” conversation, please contact Suk Chyi directly at:
             <a href="https://www.linkedin.com/in/khoosukchyi" class="linkedin-link" target="_blank">www.linkedin.com/in/khoosukchyi</a>.
         </div>
     </div>
