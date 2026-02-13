@@ -326,8 +326,7 @@ st.markdown(f"""
     <div class="bottom-container">
         <div class="disclaimer-large">A note on method — and intent:</div>
         <div class="description-body">
-            The Explorer is an experiment in knowledge architecture. The premise is simple: if one can structure signals, strip noise, and anticipate how information will be parsed by an AI, one can do the same for a regulator, a boardroom, or a cross-functional task force. It is the same muscle; it is simply a different domain.<br>
-            The premise: if you can architect knowledge for an AI — structure signal, strip noise, anticipate how it will be read and misread — you can probably architect it for a regulator, a boardroom, or a cross-functional task force. Same muscle. Different domain.<br>
+            The Explorer is an experiment in knowledge architecture. The premise is simple: if one can structure signals, strip noise, and anticipate how information will be parsed by an AI, one can do the same for a regulator, a boardroom, or a cross-functional task force. Same muscle, different domain.<br>
             Is the output perfect? Rarely. But deploying it anyway reflects a specific conviction: that in an era of complexity, the ability to define problems and reaggregate them into solutions is the highest-value skill an advisor can offer.<br>
         </div>
         <div class="contact-small">
