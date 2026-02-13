@@ -18,121 +18,34 @@ except Exception as e:
 
 # --- 2. KNOWLEDGE BASE ---
 THE_ARCHIVE = """
-Professional Knowledge Base (Markdown)
-1. Career Overview
-I began my career in a litigation boutique where the margin for error was roughly the size of a misplaced comma.
-We were consistently the smallest team among Chambers & Partners and Legal500-ranked practices, which meant two things:
-1. The work was never small.
-2. You learned fast or you didn’t last.
-I learned fast.
-My foundation was built in environments where precision, pace, and judgment mattered more than headcount. The work required moving seamlessly between statutory text, policy intent, commercial incentives, and human behaviour — often under tight timelines and high scrutiny.
+[SECTION: PROFESSIONAL BRAND]
+**The Pivot:** Transitioning from "Professional Firefighting" (Litigation) to "Fire-Prevention Architecture" (Strategic Governance). 
+**The Value Prop:** I don't just solve disputes; I design the escalation pathways and governance frameworks that stop them from starting.
+**The "Small Team" Muscle:** Forged at a boutique firm. Expertise in "Force Multiplier" leadership—using process automation to achieve results usually reserved for armies of associates.
+**Leadership Style:** Horizontal. A methodical, systems-driven approach to fixing broken processes. Comfortable with ambiguity.
 
-2. Core Competencies
-2.1 Statutory & Policy Interpretation
-I read legislation the way engineers read system diagrams:
-• Holistically
-• Contextually
-• With an eye on the underlying mischief and policy intent
-Regular materials included: Hansard, Parliamentary debates, White papers, Task force reports, Regulatory consultations.
-I frequently worked with NGOs, regulators, and think tanks — the policy ecosystem behind the black-letter law.
+[SECTION: HIGH-IMPACT METRICS & CASES]
+* **Telecommunications (5G Infrastructure):** Advised Malaysia’s four major telcos on the multi-billion-ringgit nationwide 5G rollout. Resolved disputes at the intersection of technology, competition law, and national policy.
+* **Fintech & Data (Landmark Win):** Secured a precedent-setting win for a major credit reporting agency regarding algorithm-based scoring. Provided industry-wide regulatory certainty. **Outcome: Directly contributed to a 5% rise in client share price.**
+* **Competition Law (E-Hailing):** Challenged a **RM86 million proposed penalty** by the Malaysian Competition Commission (MyCC) for a major SE Asian platform. Focused on procedural propriety and abuse of dominance standards.
+* **Energy & Geopolitics:** Negotiated between a **Fortune Global 500 O&G company** and a state government. Balanced commercial interests against sensitive national ownership disputes and statutory authority.
+* **Regulatory Defense:** Defended corporate directors in Securities Commission civil actions. Represented a "Big Four" audit firm in judicial reviews regarding investigative powers.
 
-2.2 Operating in Ambiguity
-Trained to:
-• Argue from first principles
-• Build tight micro- and macro-level reasoning
-• Anticipate industry-wide impacts
-• Identify unintended consequences before they surface
-Ambiguity wasn’t a roadblock; it was the starting point.
+[SECTION: CORE SKILLS & "THE PLAYBOOK"]
+* **Statutory Interpretation:** Reads legislation like an engineer reads a schematic. Routinely engages with Hansard and white papers to identify "policy mischief" behind the law.
+* **Negotiation:** Acts as a "translator" between commercial, technical, and regulatory dialects. Drafts "win-win" clauses that opposing stakeholders can back.
+* **Investigation Fluency:** Deep mastery of procedural fairness (show-cause), witness interviews, and maintaining the "actual and impression" of impartiality.
+* **Process Improvement:** Architect of internal workflows that compress turnaround times. 
+* **International Arbitration (FCIArb):** Fellow of the Chartered Institute of Arbitrators. Expert in cross-border evidence-taking and harmonizing procedural protocols.
 
-2.3 Advocacy & Persuasion
-Strong oral and written advocacy, tailored to: Judges, Regulators, C-suite, Cross-functional teams.
-My former boss once said: "How you ask your dad is never how you ask your mom."
-A memorable way of teaching message-audience calibration — a skill that has since become a core part of my operating system.
+[SECTION: LEADERSHIP & PHILOSOPHY]
+* **The "Barista" Principle:** (Derived from early work experience) A role is never just a task; it is about "running the entire café." Managing trust and rapport with judges, regulators, and internal ops teams is as vital as the legal argument.
+* **Mentorship:** "Any senior will thrive with your support, and any junior will grow under your guidance."
 
-2.4 Negotiation & Stakeholder Alignment
-I frequently served as: Primary negotiator, Front-line point of contact, Translator between legal, technical, commercial, and policy domains.
-I draft contractual language that brings together divergent commercial, technical, and regulatory interests — framing clauses that opposing stakeholders can still get behind. My role was to bridge gaps, align incentives, and steer fragmented groups toward a shared, practical outcome.
-
-2.5 Cross-Functional Problem Solving
-Worked closely with: Instructing solicitors, Engineering teams, Finance, Operations, Sales, Regulators.
-The job required multilingual fluency — not in literal languages, but in domain “dialects.”
-
-2.6 Investigation Fluency
-Fluent in the architecture of investigations — not just the steps, but the logic beneath them:
-•	Identifying the source and limits of investigative power
-•	Exercising discretion with precision
-•	Procedural fairness as both obligation and armour
-•	Witness interviews that surface signal, not script
-•	Report writing that lands with clarity and credibility
-•	Impartiality as discipline, not posture
-The question was never just "what happened." It was: by what authority are we asking, and are we asking fairly?
-
-2.7 Cross-Border Exposure
-Cross-border work has featured across:
-•	Tracing evidence, funds, and liability in fraud claims
-•	International arbitration
-•	Jurisdictional challenges and enforcement actions
-The work required navigating different procedural expectations, evidence rules, and enforcement regimes — not as a specialist, but as counsel who couldn't afford to treat borders as stop signs.
-
-2.8 Conflict Resolution
-Grounded in the true purpose of dispute resolution:
-•	Prioritise settlement where possible
-•	Establish common ground
-•	Narrow issues pragmatically
-•	Keep sight of the bigger picture
-One of the most profound professional muscles I developed: objective problem-solving in high-emotion environments.
-
-2.9 Relationship Building
-I once worked part-time as a barista.
-Lesson learned from my manager:
-“Being a barista isn’t just about making coffee — it’s about running the entire café.”
-Practice was the same. It wasn’t just about arguing cases. It was about:
-•	Earning trust
-•	Building rapport
-•	Forming durable partnerships
-With judges, regulators, fellow members of the Bar, clients across divisions, and even opposing counsel.
-
-3. Arbitration Expertise (FCIArb)
-As a Fellow of the Chartered Institute of Arbitrators, I built expertise in: Complex cross-border disputes, Evidence-taking standards, Procedural fairness, Harmonising competing rules, Evaluating remedies.
-
-4. Leadership & Mentorship
-As a Senior Associate, I managed and supervised junior team members.
-I was mentored by exceptional seniors, including Dato’ Malik Imtiaz Sarwar — and I’ve always aimed to be the senior I once needed.
-A junior once told me: "Any senior will thrive with your support, and any junior will grow under your guidance."
-Across 9+ years, I had front-row access to strategy, thought leadership, and principled advocacy.
-
-5. Key Impacts & Representative Matters
-
-[CATEGORY: NEGOTIATION & STRATEGY]
-Telecommunications & Infrastructure: Advised Malaysia’s four major telcos on nationwide 5G implementation. Resolved multi-billion-ringgit disputes at the intersection of technology, law, and policy.
-Energy & Geopolitics: Represented a Fortune Global 500® O&G company in sensitive negotiations with a state government. Navigated statutory, commercial, and geopolitical complexities.
-Corporate Governance: Advised on director liabilities, auditors’ duties, and internal governance for MNCs and GLCs.
-
-[CATEGORY: LITIGATION & JUDICIAL REVIEW]
-Data & Fintech: Secured a landmark win affirming the legality of an algorithm-based credit scoring model (CTOS). Resulted in regulatory certainty and contributed to a 5% share-price increase.
-Competition & Antitrust: Acted for a major Southeast Asian e-hailing platform (Grab) in judicial review against MyCC challenging an RM86M penalty. Focused on procedural fairness.
-Regulatory Enforcement: Lead associate in Securities Commission civil actions. JR for Big Four audit firm challenging investigative findings.
-Appellate Advocacy: Regularly appeared before the Federal Court.
-
-6. Strategic Capabilities
-Trained to rotate across industries, geographies, and functions with minimal ramp-up.
-Core strengths include: Deconstructing sprawling problems, Reassembling them into solvable parts, Driving alignment across sceptical or siloed stakeholders.
-Clear, structured thinking was non-negotiable.
-
-7. Executive Operating System
-Where I lack a specific experience, I bring a transferable playbook shaped by high-stakes decision environments: Systems-driven diagnostics, Methodical problem framing, Comfort with ambiguity, A horizontal cross-domain leadership style.
-
-8. Career Transition Rationale
-Litigation is the professional equivalent of firefighting in 99 buildings at once.
-I’m ready to sit at the table designing the fire-prevention architecture, the escalation pathways, and the governance frameworks that stop the fires from starting.
-This isn’t a step back — it’s a step toward strategic impact.
-
-9. Sabbatical (Since September 2025)
-Focus: Fintech & Digital Assets (HKU), Crisis Management (Dartmouth), Leadership (Harvard), Digital Fluency (Binance).
-Goal: Bridge traditional legal practice with the future of regulation.
-
-10. Current Focus
-Studying European data protection (CIPP/E). Job-hunting for roles in governance, accountability, risk, and structured problem-solving.
+[SECTION: EDUCATION & CURRENT STATUS]
+* **Sabbatical (2025-Present):** Focused on Fintech (HKU), Crisis Management (Dartmouth), and Leadership (Harvard).
+* **Current Goal:** Bridging the gap between traditional governance and modern data privacy.
+* **Status:** Studying for CIPP/E (European Data Protection). Job hunting for strategic governance roles.
 """
 
 # --- 3. DESIGN ---
@@ -327,19 +240,23 @@ if query:
     - YES: Proceed to describe her experience directly.
     - NO: You MUST start the response with this exact phrase: "The archive does not seem to contain specific data on '{query}'." Then, and only then, bridge to her transferable skills (e.g., "However, her experience in [X] demonstrates...").
 
-    STEP 2: CHECK FOR CONTEXT (NEGOTIATION VS LITIGATION)
-    - If query is "Negotiation/Deal/Strategy": EXCLUDE court judgments (e.g., MyCC, CTOS). Focus on the Telco 5G and O&G deals.
-    - If query is "Litigation/Court/Dispute": INCLUDE the court judgments.
+   STEP 2: PRIORITIZE METRICS & HARD FACTS
+    - If the user asks about "Impact," "Results," or "Achievements," you MUST cite the specific numbers (e.g., "5% share price increase," "RM86 million penalty," "Multi-billion 5G rollout").
+    - Avoid generic fluff. Use the "Dense Fact" modules from the archive to ground your answer.
 
-    STEP 3: PRONOUN RULES (CRITICAL)
+    STEP 3: CONTEXT AWARENESS
+    - If query is "Negotiation/Deal/Strategy": Focus on the Telco 5G, O&G deals, and the "Fire-Prevention" philosophy.
+    - If query is "Litigation/Court/Dispute": Focus on the MyCC (Competition), Fintech, and Big Four cases.
+
+    STEP 4: PRONOUN RULES (CRITICAL)
     - ALWAYS start the first sentence with "Suk Chyi" (never "She").
     - After the first mention, you may use "she/her" for subsequent references.
-    - Example: "Suk Chyi began her career..." NOT "She began her career..."
-
-    STEP 4: FORMATTING (CRITICAL)
+   
+    STEP 5: FORMATTING (CRITICAL)
     - Use DOUBLE LINE BREAKS (\\n\\n) between every paragraph.
     - Keep paragraphs short (2-4 lines).
     - Tone: Polished, sophisticated, senior, subtly witty, confidently intelligent.
+    - Treat the user as a peer (another executive), not a junior.
 
     ARCHIVE:
     {THE_ARCHIVE}
