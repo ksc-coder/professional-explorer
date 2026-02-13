@@ -56,6 +56,12 @@ I don't just argue the law; I translate it. I bridge the gap between rigid regul
     * *Fintech:* Blockchain ethics and asset compliance (HKU).
     * *Crisis Comms:* Strategic reputational risk (Dartmouth).
     * *Data Privacy:* Preparing for CIPP/E (European Data Protection).
+
+6. The Executive Playbook (Transferable Skills)
+* **Adaptability:** Trained to rotate across industries, geographies, and functions on the fly. Accustomed to mastering unfamiliar businesses (from O&G to Fintech) rapidly.
+* **Problem Disaggregation:** Mastered the art of breaking "sprawling, messy problems" into solvable parts. Sharpened judgment through high-stakes pattern recognition.
+* **No Job Too Small:** Being in a small team meant no room for ego. I have rolled up my sleeves for everything from bundling documents to Board meetings—approaching both with the same standard of care.
+* **Systems-Driven Leadership:** My default mode is to fix what is broken, reimagine what is possible, and scale what works. I bring a horizontal approach to leadership and a high comfort with ambiguity.
 """
 
 # --- 3. DESIGN ---
@@ -248,7 +254,13 @@ if query:
     STEP 1: CHECK FOR DATA EXISTENCE
     - Does the specific term "{query}" appear in the Archive?
     - YES: Proceed to describe her experience directly.
-    - NO: You MUST start the response with this exact phrase: "The archive does not seem to contain specific data on '{query}'." Then, and only then, bridge to her transferable skills (e.g., "However, her experience in [X] demonstrates...").
+    - NO: You MUST start the response with this exact phrase: "The archive does not seem to contain specific data on '{query}'." 
+          THEN, pivot immediately to Section 6 (The Executive Playbook). 
+          Explain that while she may not have that specific keyword, her "muscle memory" is shaped by high-stakes intensity. 
+          Use these specific phrases: 
+          - "Trained to rotate across industries and master unfamiliar businesses on the fly."
+          - "Rolled up her sleeves for everything from bundling to Board meetings."
+          - "A methodical, systems-driven approach to breaking messy problems into solvable parts."
 
    STEP 2: CONTEXTUAL REFRAMING (CRITICAL)
     - **If query is about "Litigation/Court":** Discuss the cases (MyCC, Federal Court) as legal victories.
